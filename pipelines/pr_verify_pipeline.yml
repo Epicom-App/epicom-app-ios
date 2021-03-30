@@ -3,7 +3,9 @@ variables:
   - name: BUNDLE_PATH
     value: $(Pipeline.Workspace)/.bundle
 
-trigger: none
+pr:
+  - master
+  - develop
 
 pool:
   vmImage: 'macOS-10.15'
