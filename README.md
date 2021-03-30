@@ -28,4 +28,4 @@ Why is the project called Ebolapp, but the App itself Epicom? Ebolapp is the nam
 
 ## Contribution
 
-Please check the contribution.md on how to colloborate on the project.
+Please check the [contribution.md](/CONTRIBUTION.md) on how to colloborate on the project.
