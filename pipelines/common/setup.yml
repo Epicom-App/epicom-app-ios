@@ -1,0 +1,39 @@
+steps:
+  - script: |
+      echo "##vso[task.setvariable variable=JAVA_HOME]$(JAVA_HOME_14_X64)"
+      echo "##vso[task.setvariable variable=PATH]$(JAVA_HOME_14_X64)/bin:$(PATH)"
+    displayName: "Set java version"
+    
+  - checkout: self
+    persistCredentials: true
+
+  - task: Cache@2
+    inputs:
+      key: 'gems | "$(Agent.OS)" | Gemfile.lock'
+      restoreKeys: | 
+        gems | "$(Agent.OS)"
+        gems
+      path: $(BUNDLE_PATH)
+    displayName: Cache gems
+
+  - bash: bundle install
+    displayName: bundle install
+
+  - task: DownloadSecureFile@1
+    displayName: Download Debug Config
+    inputs:
+      secureFile: 'Config-Debug.xcconfig'
+
+  - task: DownloadSecureFile@1
+    displayName: Download Release Config
+    inputs:
+      secureFile: 'Config-Release.xcconfig'
+
+  - task: CopyFiles@2
+    inputs:
+      sourceFolder: '$(Agent.TempDirectory)'
+      contents: |
+        Config-Debug.xcconfig
+        Config-Release.xcconfig
+      targetFolder: Ebolapp/App/Configurations
+      overWrite: true

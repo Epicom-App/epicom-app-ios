@@ -1,0 +1,56 @@
+variables:
+  - group: Fastlane-Env
+  - group: Fastlane-Env-AppStore
+  - name: BUNDLE_PATH
+    value: $(Pipeline.Workspace)/.bundle
+
+trigger: 
+  - master
+
+pool:
+  vmImage: 'macOS-10.15'
+
+name: $(Date:yyyyMMdd)$(Rev:rr)
+steps:
+  - template: common/setup.yml
+
+  # Install all required provisiong profiles
+
+  - task: InstallAppleProvisioningProfile@1
+    inputs:
+      provProfileSecureFile: 'Epicom_AppStore.mobileprovision'
+
+  - task: InstallAppleProvisioningProfile@1
+    inputs:
+      provProfileSecureFile: 'Epicom_Widget_AppStore.mobileprovision'
+
+  # Install all required certificates
+
+  - task: InstallAppleCertificate@2
+    inputs:
+      certSecureFile: 'freundeliberias-distribution-certificate.p12'
+      certPwd: '$(distribution_cert_pw)'
+      keychain: 'temp'
+
+  # Test + Azure reports
+
+  - bash: bundle exec fastlane test --env test
+    displayName: fastlane run tests
+
+  - template: common/publish_reports.yml
+
+  # Remove framework
+  - task: Bash@3
+    inputs:
+      targetType: 'inline'
+      script: |
+        rm -R Ebolapp/Resources/Frameworks/Common/CommonCode.framework
+
+  # Build + upload
+
+  - bash: bundle exec fastlane build_and_deploy build_number:$(Build.BuildNumber) --env appstore
+    env:
+       APPSTORECONNECT_APPLE_ID: $(APPSTORECONNECT_APPLE_ID)
+       APPSTORECONNECT_USER_NAME: $(APPSTORECONNECT_USER_NAME)
+       FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD: $(APPLICATION_SPECIFIC_PASSWORD)
+    displayName: fastlane build&deploy

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TopAnnotationView" customModule="Ebolapp" customModuleProvider="target">
+            <connections>
+                <outlet property="labelContainer" destination="CzH-YF-NRU" id="4Ej-HM-QFa"/>
+                <outlet property="textLabel" destination="B90-MX-UBQ" id="aMh-CH-iQf"/>
+                <outlet property="triangleView" destination="BcT-4B-4gN" id="t4G-37-wds"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="r1h-FE-cx9">
+            <rect key="frame" x="0.0" y="0.0" width="431" height="121"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CzH-YF-NRU">
+                    <rect key="frame" x="0.0" y="0.0" width="431" height="24"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aug 12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B90-MX-UBQ">
+                            <rect key="frame" x="8" y="2" width="415" height="20"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="B90-MX-UBQ" secondAttribute="trailing" constant="8" id="1Ko-EA-uAb"/>
+                        <constraint firstAttribute="height" constant="24" id="2o5-bL-ES0"/>
+                        <constraint firstItem="B90-MX-UBQ" firstAttribute="top" secondItem="CzH-YF-NRU" secondAttribute="top" constant="2" id="ACk-Ua-WR9"/>
+                        <constraint firstItem="B90-MX-UBQ" firstAttribute="leading" secondItem="CzH-YF-NRU" secondAttribute="leading" constant="8" id="Aad-Yg-jX0"/>
+                        <constraint firstAttribute="bottom" secondItem="B90-MX-UBQ" secondAttribute="bottom" constant="2" id="UOB-yK-XO1"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BcT-4B-4gN" customClass="TriangleView" customModule="Ebolapp" customModuleProvider="target">
+                    <rect key="frame" x="211.5" y="24" width="8" height="8"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="8" id="mTr-h4-pXd"/>
+                        <constraint firstAttribute="width" constant="8" id="qFh-JA-rqn"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="LQL-kp-V44"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="BcT-4B-4gN" secondAttribute="bottom" id="7OS-Xq-VSL"/>
+                <constraint firstAttribute="trailing" secondItem="CzH-YF-NRU" secondAttribute="trailing" id="9Cm-po-lJj"/>
+                <constraint firstItem="BcT-4B-4gN" firstAttribute="centerX" secondItem="r1h-FE-cx9" secondAttribute="centerX" id="b6R-Gp-agT"/>
+                <constraint firstItem="BcT-4B-4gN" firstAttribute="top" secondItem="CzH-YF-NRU" secondAttribute="bottom" id="fgr-tg-ggr"/>
+                <constraint firstItem="CzH-YF-NRU" firstAttribute="top" secondItem="r1h-FE-cx9" secondAttribute="top" id="iNo-9f-fhw"/>
+                <constraint firstItem="CzH-YF-NRU" firstAttribute="leading" secondItem="r1h-FE-cx9" secondAttribute="leading" id="oF3-4a-20P"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="41.304347826086961" y="501.22767857142856"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

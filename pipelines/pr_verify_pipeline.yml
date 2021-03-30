@@ -1,0 +1,20 @@
+variables:
+  - group: Fastlane-Env
+  - name: BUNDLE_PATH
+    value: $(Pipeline.Workspace)/.bundle
+
+trigger: none
+
+pool:
+  vmImage: 'macOS-10.15'
+
+name: $(Date:yyyyMMdd)$(Rev:rr)
+steps:
+  - template: common/setup.yml
+
+  # Test + Azure reports
+
+  - bash: bundle exec fastlane test --env test
+    displayName: fastlane run tests
+
+  - template: common/publish_reports.yml

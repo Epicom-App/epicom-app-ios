@@ -1,0 +1,446 @@
+global_fastfile_version = "2.4.2"
+
+fastlane_version "2.130.0"
+default_platform :ios
+opt_out_usage
+skip_docs
+
+ENV['FASTLANE_BUILD_DIRECTORY'] = "fastlane_builds"
+ENV['TEST_BUILD_DIR'] = File.join ENV['FASTLANE_BUILD_DIRECTORY'], "Tests"
+ENV['SONAR_REPORT_DIR'] = "sonar_reports"
+
+slather_format_cobertura = "cobertura_xml"
+slather_format_html = "html"
+slather_format_llvm = "llvm_cov"
+
+platform :ios do
+
+  before_all do |lane, options|
+
+    UI.important "GlobalFastfile Version: #{global_fastfile_version}"
+
+    UI.important "XC_PATH: #{ENV['XC_PATH']}"
+    UI.important "XC_PROJECT_NAME: #{ENV['XC_PROJECT_NAME']}"
+
+    git_clean = options[:git_clean].nil? ? true : options[:git_clean]
+
+    if git_clean
+      ensure_git_status_clean(show_diff: true)
+    end
+
+    clear_derived_data
+
+    # Set Xcode path, only for CI-runners
+    if is_ci
+        xcode_select(ENV['XC_PATH'])
+    end
+  end
+
+
+  # Pipeline lanes --------------------------------------------------------
+
+  desc "Run tests (scan)"
+  desc "Optional: unit (default == true) - Running unit tests"
+  desc "Optional: ui (default == false) - Running ui tests"
+  desc "Optional: git_clean - Check ensure_git_status_clean (default == true)"
+  lane :test do |options|
+    
+    unit_testing = options[:unit].nil? ? true : options[:unit]
+    ui_testing = options[:ui].nil? ? false : options[:ui]
+
+    UI.important "Unit Tests #{unit_testing}"
+    UI.important "UI Tests #{ui_testing}"
+
+    devices = ENV['XC_SIM_DEVICES'].split(", ")
+    UI.important "Devices:  #{devices}" 
+
+    # build project before testing
+    scan(
+      scheme: ENV['XC_FULL_TEST_SCHEME'],
+      build_for_testing: true,
+      clean: true,
+      derived_data_path: ENV['TEST_BUILD_DIR'],
+      force_quit_simulator: true,
+      devices: devices
+    )
+
+    if unit_testing
+
+      # run unit tests
+      UI.important "XC_UNIT_TEST_SCHEME: #{ENV['XC_UNIT_TEST_SCHEME']}"
+      scan(
+        scheme: ENV['XC_UNIT_TEST_SCHEME'],
+        test_without_building: true,
+        code_coverage: true,
+        fail_build: false,
+        output_types: "html,junit",
+        output_files: "unittest.html,unittest.junit",
+        derived_data_path: ENV['TEST_BUILD_DIR'],
+        output_directory: ENV['SONAR_REPORT_DIR'],
+        force_quit_simulator: true,
+        devices: devices
+      )
+
+      slather_run(format: slather_format_cobertura)
+
+    end
+
+    if ui_testing
+    
+      # run ui tests
+      UI.important "XC_UI_TEST_SCHEME: #{ENV['XC_UI_TEST_SCHEME']}"
+      scan(
+        scheme: ENV['XC_UI_TEST_SCHEME'],
+        test_without_building: true,        
+        code_coverage: false,
+        fail_build: false,
+        output_types: "html,junit",
+        output_files: "uitest.html,uitest.junit",
+        derived_data_path: ENV['TEST_BUILD_DIR'],
+        output_directory: ENV['SONAR_REPORT_DIR'],
+        force_quit_simulator: true,
+        devices: devices
+      )
+
+    end
+
+    if options[:html] == true
+
+      slather_run(format: slather_format_html)
+
+    end
+
+  end
+
+
+  desc "Run tests (scan) and analyze code"
+  desc "Creates reports (Coverage, SwiftLint, Lizard) for SonarQube"
+  desc "Optional: ui (default == false) - Running ui tests"
+  desc "Optional: git_clean - Check ensure_git_status_clean (default == true)"
+  lane :test_and_analyze do |options|
+
+    test(
+      ui: options[:ui],
+      html: options[:html]
+    )
+
+    analyze_code
+    
+  end
+
+
+  desc "This lane contains the following steps"
+  desc "Increment build number, set icon badge (non-appstore versions), build, AppCenter-upload, set git tag, optional upload to TestFlight"
+  desc "Required: build_number"
+  desc "Optional: upload - Upload build to AppCenter (default == true)"
+  desc "Optional: git_clean - Check ensure_git_status_clean (default == true)"
+  desc "Optional: git_tag - Set git-tag when build is done (default == true)"
+  desc "Optional: reset_git - Reset git when lane is finished (default == false)"
+  lane :build_and_deploy do |options|
+
+    UI.important "XC_TARGET_NAME: #{ENV['XC_TARGET_NAME']}"
+    UI.important "XC_SCHEME: #{ENV['XC_SCHEME']}"
+    UI.important "XC_CONFIGURATION: #{ENV['XC_CONFIGURATION']}"
+    UI.important "XC_EXPORT_METHOD: #{ENV['XC_EXPORT_METHOD']}"
+    UI.important "XC_INFO_PLIST_PATH: #{ENV['XC_INFO_PLIST_PATH']}"
+
+    if options[:build_number].to_s.strip.empty?
+      UI.user_error! "Parameter build_number is missing"
+    end
+
+    increment_build_number(
+      build_number: options[:build_number]
+    )
+
+    is_store_build = ENV['XC_EXPORT_METHOD'] == "app-store"
+    UI.important "Is AppStore build: #{is_store_build}"
+
+    set_appcenter_secret
+
+    unless is_store_build
+      add_badge(
+        shield: "#{ENV['XC_CONFIGURATION']}-#{options[:build_number]}-red",
+        no_badge: true,
+        glob: "/#{ENV['XC_PROJECT_NAME']}/**/*.appiconset/*.{png,PNG}"
+      )
+    end
+
+    gym(
+      workspace: workspace_name,
+      configuration: ENV['XC_CONFIGURATION'],
+      scheme: ENV['XC_SCHEME'],
+      output_directory: ipa_output_dir,
+      output_name: ipa_file_name,
+      clean: true,
+      include_bitcode: ENV['XC_BITCODE'],
+      export_method: ENV['XC_EXPORT_METHOD']
+    )
+
+    UI.important "ipa file name: #{ipa_file_name}"
+    UI.important "ipa output dir: #{ipa_output_dir}"
+
+    changelog = pretty_logs
+
+    write_changelog(
+      changelog: changelog,
+      output_directory: ipa_output_dir
+    )
+
+    deploy_to_appcenter(
+      upload: options[:upload],
+      changelog: changelog
+    )
+
+    deploy_to_testflight
+
+    generate_tag(
+      build_number: options[:build_number],
+      git_tag: options[:git_tag]
+    )
+
+    reset(
+      reset_git: options[:reset_git]
+    )
+
+  end
+
+
+  # Private lanes testing-------------------------------------------------------------
+
+  private_lane :analyze_code do |options|
+
+    slather_run(format: slather_format_llvm)
+
+    # lizard
+    lizard_exe_path = "./scripts/lizard/lizard.py"
+    lizardInstalled = File.exist?(File.expand_path"../"+lizard_exe_path)
+    
+    if lizardInstalled
+
+      lizard(
+        executable: lizard_exe_path,
+        source_folder: ENV['XC_PROJECT_NAME'],
+        language: "swift",
+        export_type: "xml",
+        report_file: ENV['SONAR_REPORT_DIR'] + "/lizard.xml",
+        ignore_exit_status: true
+      )
+
+    end
+
+    # swiftlint
+    swiftlintPath = "Pods/SwiftLint/swiftlint"
+    swiftlintInstalled = File.exist?(File.expand_path"../"+swiftlintPath)
+
+    if swiftlintInstalled
+
+      swiftlint(
+        output_file: ENV['SONAR_REPORT_DIR'] + "/swiftlint.txt",
+        config_file: "./.swiftlint.yml",
+        ignore_exit_status: true,
+        executable: "./"+swiftlintPath
+      )
+
+    end
+  end
+
+
+  private_lane :slather_run do |options|
+
+    format = options[:format]
+    ignore = ENV['XC_COVERAGE_IGNORE'].split(", ")
+
+    # add an extra folder for html to the output_directory because it procudes multiple files
+    output_directory_sub = format == slather_format_html ? "/html" : ""
+
+    slather(
+      scheme: ENV['XC_UNIT_TEST_SCHEME'],
+      proj: ENV['XC_PROJECT_NAME'] + ".xcodeproj",
+      workspace: workspace_name,
+      llvm_cov: format == slather_format_llvm,
+      cobertura_xml: format == slather_format_cobertura,
+      html: format == slather_format_html,
+      ignore: ignore,
+      build_directory: ENV['TEST_BUILD_DIR'],
+      output_directory: ENV['SONAR_REPORT_DIR'] + output_directory_sub
+    )
+
+  end
+
+
+  # Private lanes build and deploy --------------------------------------------------
+
+  private_lane :write_changelog do |options|
+
+    output_directory = options[:output_directory] || "."
+    changelog = options[:changelog] || "No changelog given"
+
+    begin
+      File.open("../#{output_directory}/changelog.txt", "w") { |f|
+        f.write "#{changelog}\n"
+      }
+    rescue => ex
+      UI.error("writing changelog failed: #{ex}")
+    end
+
+  end
+
+
+  private_lane :set_appcenter_secret do |options|
+
+    # replace placeholder in the Info.plist with the provided secret
+    secret = ENV['APPCENTER_APP_SECRET']
+    plist = "../" + ENV['XC_INFO_PLIST_PATH']
+    sh("sed", "-i", "", "s/{appcenter_app_secret}/" + secret +"/", plist)
+
+  end
+
+
+  private_lane :deploy_to_appcenter do |options|
+
+    upload = options[:upload].nil? ? true : options[:upload]
+
+    if upload
+
+      UI.important "APPCENTER_API_TOKEN: #{ENV['APPCENTER_API_TOKEN']}"
+      UI.important "APPCENTER_OWNER_NAME: #{ENV['APPCENTER_OWNER_NAME']}"
+
+      UI.important "APPCENTER_APP_NAME: #{ENV['APPCENTER_APP_NAME']}"
+      UI.important "APPCENTER_APP_SECRET: #{ENV['APPCENTER_APP_SECRET']}"
+      UI.important "APPCENTER_DESTINATIONS: #{ENV['APPCENTER_DESTINATIONS']}"
+      UI.important "APPCENTER_NOTIFY_TESTER: #{ENV['APPCENTER_NOTIFY_TESTER']}"
+
+      UI.important "Uploading to AppCenter"
+
+      appcenter_upload(
+        api_token: ENV['APPCENTER_API_TOKEN'],
+        owner_name: ENV['APPCENTER_OWNER_NAME'],
+        app_name: ENV['APPCENTER_APP_NAME'],
+        destinations: ENV['APPCENTER_DESTINATIONS'] != "" ? ENV['APPCENTER_DESTINATIONS'] : "Collaborators",
+        release_notes: options[:changelog],
+        dsym: "#{ipa_output_dir}/#{output_file_name}.app.dSYM.zip",
+        notify_testers: ENV['APPCENTER_NOTIFY_TESTER']
+      )
+
+    else 
+
+      UI.important "Skipped AppCenter upload"
+
+    end
+
+  end
+
+
+  private_lane :deploy_to_testflight do |options|
+  
+    apple_id = ENV['APPSTORECONNECT_APPLE_ID']
+    username = ENV['APPSTORECONNECT_USER_NAME']
+    application_pwd = ENV['FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD']
+
+    if (!(apple_id.nil? || apple_id.empty?) && 
+        !(username.nil? || username.empty?) && 
+        !(application_pwd.nil? || application_pwd.empty?))
+
+      UI.important "Uploading to TestFlight"
+
+      # make sure there is no changelog in the lane context, otherwise upload_to_testflight will try to login
+      lane_context[SharedValues::FL_CHANGELOG] = nil
+
+      upload_to_testflight(
+        username: username,
+        apple_id: apple_id,
+        skip_submission: true,
+        skip_waiting_for_build_processing: true
+      )
+
+    else 
+
+      UI.important "Skipped TestFlight upload"
+
+    end
+
+  end
+
+
+  private_lane :generate_tag do |options|
+
+    git_tag = options[:git_tag].nil? ? true : options[:git_tag]
+
+    if git_tag == false 
+      UI.important "Skipped git tag"
+      next
+    end
+
+    new_tag = "#{ENV['XC_TARGET_NAME']}/#{ENV['XC_CONFIGURATION']}/v_#{project_version_number}/Build_#{options[:build_number]}"
+
+    UI.important "Git tag #{new_tag}"
+
+    add_git_tag(
+      tag: new_tag
+    )
+
+    push_git_tags()
+
+  end
+
+
+  private_lane :reset do |options|
+
+    if options[:reset_git] == true
+
+      UI.important "Resetting git"
+      reset_git_repo(force: true)
+    
+    end
+  end
+
+
+  # Helper Functions------------------------------------------------------------------
+
+  def pretty_logs
+
+    changelog_from_git_commits(
+      pretty: "- [%h]: %s",
+      merge_commit_filtering: "exclude_merges"
+    )
+
+  end
+
+
+  def project_version_number
+    get_version_number(target: ENV['XC_TARGET_NAME'])
+  end
+
+  def output_file_name
+    output_file_name = "#{ENV['XC_TARGET_NAME']}_#{ENV['XC_CONFIGURATION']}_v#{project_version_number}_build#{get_build_number}"
+  end
+
+  def ipa_file_name
+    ipa_file_name = "#{output_file_name}.ipa"
+  end
+
+  def ipa_output_dir 
+    output_dir = "#{ENV['FASTLANE_BUILD_DIRECTORY']}/#{ENV['XC_TARGET_NAME']}/#{ENV['XC_CONFIGURATION']}"
+  end
+
+  def workspace_name
+
+    workspace_file_name = "#{ENV['XC_PROJECT_NAME']}.xcworkspace"
+
+    if File.exist?(File.expand_path"../"+workspace_file_name)
+      workspace_name = workspace_file_name
+    else
+      workspace_name = nil
+    end
+
+  end
+
+
+  # After All------------------------------------------
+
+  error do |lane, exception, options|
+
+    UI.error "Crash in lane #{lane}"
+  end
+end
+

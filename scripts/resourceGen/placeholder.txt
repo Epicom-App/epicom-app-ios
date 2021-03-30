@@ -1,0 +1,6 @@
+{String1}=%1$@
+{String2}=%2$@
+{String3}=%3$@
+{Number1}=%1$i
+{Number2}=%2$i
+{Number3}=%3$i

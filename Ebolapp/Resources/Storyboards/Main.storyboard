@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4cp-z8-Ged">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MapViewController" customModule="Ebolapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="RbK-Rl-pfs">
+                                <rect key="frame" x="332" y="718" width="60" height="112"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqO-bD-GlB" customClass="MapControlButton" customModule="Ebolapp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="I4j-bY-dtA"/>
+                                            <constraint firstAttribute="height" constant="48" id="duf-Wm-jgY"/>
+                                        </constraints>
+                                        <state key="normal" image="map_location_icon"/>
+                                        <connections>
+                                            <action selector="didTapOnButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OLO-C3-e0t"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DBS-VL-BkJ" customClass="MapControlButton" customModule="Ebolapp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="64" width="60" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="E7p-Z8-c7O"/>
+                                            <constraint firstAttribute="height" constant="48" id="yVf-uz-zf5"/>
+                                        </constraints>
+                                        <state key="normal" image="map_calendar_icon"/>
+                                        <connections>
+                                            <action selector="didTapOnButtonWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q7D-gy-cGW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eNY-9G-Bur" customClass="MapDateAnnotationView" customModule="Ebolapp" customModuleProvider="target">
+                                <rect key="frame" x="80" y="789" width="240" height="34"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" placeholder="YES" id="L6r-9c-mpj"/>
+                                    <constraint firstAttribute="height" constant="34" placeholder="YES" id="Vup-Fl-G5z"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="RbK-Rl-pfs" secondAttribute="trailing" constant="22" id="Ehr-ko-AkE"/>
+                            <constraint firstItem="DBS-VL-BkJ" firstAttribute="centerY" secondItem="eNY-9G-Bur" secondAttribute="centerY" id="OJw-Hk-HWY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RbK-Rl-pfs" secondAttribute="bottom" constant="32" id="Zxg-Dv-aqx"/>
+                            <constraint firstItem="RbK-Rl-pfs" firstAttribute="leading" secondItem="eNY-9G-Bur" secondAttribute="trailing" constant="12" id="wwN-GK-JhY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GYc-Mb-T9o"/>
+                    <connections>
+                        <outlet property="calendarButton" destination="DBS-VL-BkJ" id="qJL-Ac-ElJ"/>
+                        <outlet property="controlsBottomConstraint" destination="Zxg-Dv-aqx" id="EXV-OR-46k"/>
+                        <outlet property="dateAnnotationView" destination="eNY-9G-Bur" id="bDE-Aj-0jn"/>
+                        <outlet property="locationButton" destination="JqO-bD-GlB" id="LkW-Hm-iAg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="702.89855072463774" y="-599.33035714285711"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="ucD-9A-lrS">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zCf-wl-5xr" customClass="SettingsViewController" customModule="Ebolapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Db-49-iEG"/>
+                        <viewControllerLayoutGuide type="bottom" id="8BK-gv-tCi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LRZ-NH-eec">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="LhF-fM-wC1">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LhF-fM-wC1" firstAttribute="top" secondItem="LRZ-NH-eec" secondAttribute="top" id="7Zu-Hh-0rl"/>
+                            <constraint firstAttribute="trailing" secondItem="LhF-fM-wC1" secondAttribute="trailing" id="T2T-eU-PSW"/>
+                            <constraint firstItem="LhF-fM-wC1" firstAttribute="leading" secondItem="LRZ-NH-eec" secondAttribute="leading" id="gK6-Gk-yzd"/>
+                            <constraint firstAttribute="bottom" secondItem="LhF-fM-wC1" secondAttribute="bottom" id="pRc-nH-YDh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="qO3-Gn-Fg6"/>
+                    <connections>
+                        <outlet property="tableView" destination="LhF-fM-wC1" id="Ujh-ES-Es7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oon-wo-7IE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="703" y="93"/>
+        </scene>
+        <!--Initial View Controller-->
+        <scene sceneID="LrY-dC-UYU">
+            <objects>
+                <viewController storyboardIdentifier="InitialViewController" id="4cp-z8-Ged" customClass="InitialViewController" customModule="Ebolapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Qs-M0-3vA"/>
+                        <viewControllerLayoutGuide type="bottom" id="9aP-Fa-Y8h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xhl-8f-skF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="xF6-gB-SxX">
+                                <rect key="frame" x="168" y="284" width="78" height="128.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_logo_icon" translatesAutoresizingMaskIntoConstraints="NO" id="IKs-NT-ZDU">
+                                        <rect key="frame" x="0.0" y="0.0" width="78" height="92"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EPICOM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2GR-80-ea8">
+                                        <rect key="frame" x="0.0" y="108" width="78" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" red="0.93333333330000001" green="0.92941176469999998" blue="0.90980392160000001" alpha="1" colorSpace="deviceRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="8gc-hB-tBF">
+                                <rect key="frame" x="197" y="428.5" width="20" height="20"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please wait. It can take a few minutes..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rp0-JF-R0o">
+                                <rect key="frame" x="16" y="464.5" width="382" height="41"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1647058824" green="0.25882352939999997" blue="0.36470588240000001" alpha="1" colorSpace="deviceRGB"/>
+                        <constraints>
+                            <constraint firstItem="xF6-gB-SxX" firstAttribute="centerX" secondItem="xhl-8f-skF" secondAttribute="centerX" id="7Vp-jW-LJz"/>
+                            <constraint firstItem="8gc-hB-tBF" firstAttribute="centerX" secondItem="xhl-8f-skF" secondAttribute="centerX" id="BKn-ZX-ax5"/>
+                            <constraint firstItem="Rp0-JF-R0o" firstAttribute="leading" secondItem="xhl-8f-skF" secondAttribute="leading" constant="16" id="TQJ-zb-SyJ"/>
+                            <constraint firstItem="8gc-hB-tBF" firstAttribute="top" secondItem="xF6-gB-SxX" secondAttribute="bottom" constant="16" id="VvB-0s-f7j"/>
+                            <constraint firstAttribute="trailing" secondItem="Rp0-JF-R0o" secondAttribute="trailing" constant="16" id="aMJ-ZD-Izd"/>
+                            <constraint firstItem="xF6-gB-SxX" firstAttribute="centerY" secondItem="xhl-8f-skF" secondAttribute="centerY" constant="-100" id="n38-Hq-nWE"/>
+                            <constraint firstItem="Rp0-JF-R0o" firstAttribute="top" secondItem="8gc-hB-tBF" secondAttribute="bottom" constant="16" id="vEA-E4-fKG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="Rp0-JF-R0o" id="xMe-T1-WFd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FyY-kO-uwR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1142.0289855072465" y="-599.33035714285711"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="a40-rj-h4V">
+            <objects>
+                <navigationController storyboardIdentifier="MapNavigationController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="txZ-QD-K4B" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="cgU-tT-7cK"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="SE7-sG-i85">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="a3B-La-cQG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FbV-Ln-AGc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-206" y="-599"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="ibk-zd-iT2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E3l-it-4ix" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="7AI-Ho-6lP"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="M4r-9l-XMW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zCf-wl-5xr" kind="relationship" relationship="rootViewController" id="UwW-xA-IQw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e7C-qs-Z77" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-206" y="93"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="map_calendar_icon" width="29" height="28"/>
+        <image name="map_location_icon" width="29" height="28"/>
+        <image name="splash_logo_icon" width="78" height="92"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

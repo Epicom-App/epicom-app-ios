@@ -1,0 +1,14 @@
+input_dir: Ebolapp/Resources
+output_dir: Ebolapp/Generated/SwiftGen
+
+colors:
+  inputs: colors.xml
+  outputs:
+    templateName: swift4
+    output: Colors.swift
+
+strings:
+  inputs: [de.lproj/Localizable.strings, NonLocalizable.strings, Tracking.strings]
+  outputs:
+    templateName: structured-swift4
+    output: Localizations.swift

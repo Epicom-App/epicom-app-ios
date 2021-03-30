@@ -1,0 +1,4 @@
+framework module AFLoggerModule {
+  header "AFLoggerModule-Swift.h"
+  requires objc
+}

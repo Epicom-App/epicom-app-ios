@@ -1,0 +1,3082 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		1E798429DCFA7906F6625CCFC1088744 /* SwiftGen */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 3BF1D49C02E99EC22963827A744F4D4C /* Build configuration list for PBXAggregateTarget "SwiftGen" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = SwiftGen;
+		};
+		52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 848C5805741493CC1497D2B905E4A1C0 /* Build configuration list for PBXAggregateTarget "SwiftLint" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = SwiftLint;
+		};
+		A3282A5B2437E609EEB85861D7ECE717 /* AppCenter */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = D1F732ECA360F5ECA0D3D7F2331AB1D7 /* Build configuration list for PBXAggregateTarget "AppCenter" */;
+			buildPhases = (
+			);
+			dependencies = (
+				40D6DA01D43BEC0A39EFF3262D20A8EF /* PBXTargetDependency */,
+			);
+			name = AppCenter;
+		};
+		B08332B0C91F6CDC405644DADDB96E3C /* LicensePlist */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 1D9AF1744A442A51CB79DA2FCDF9104A /* Build configuration list for PBXAggregateTarget "LicensePlist" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = LicensePlist;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		02FC5C7A0C7741BA704AF4993E6E5CAB /* Pods-EbolappWidgetExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 75CF50ED7BF2E2A60E87EEEC9DADA1BF /* Pods-EbolappWidgetExtension-dummy.m */; };
+		033EFDC61B9B341F1D3430F1FFD7E11A /* UIColor_Hex_Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CF2F7F17DAEB63C69DBEBB088D88083F /* UIColor_Hex_Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		06F534E1BF8B1B087718D1115AD94C37 /* de.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 09D662CB45F6374224F11796B0FB9D6C /* de.lproj */; };
+		0E5890DCBC7A906CD1B8CC725B1E9FB8 /* it.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 324D5DA331679A455E15385979D80D10 /* it.lproj */; };
+		16F6D9BDF5200717700290962CD907F7 /* UIColor_Hex_Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A2C8A0E18CD1E5B3E1C36E78A27B2D /* UIColor_Hex_Swift-dummy.m */; };
+		19144D363C2B74EACFCD813DEBEA9B48 /* Pods-EbolappWidgetExtension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9049B156E946223693BF3E4AFDF68A5A /* Pods-EbolappWidgetExtension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FC5245CDDFC64C23D4AFFF272424BE8 /* UIColorInputError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D239F886B77EF6FBA5D39CD74F4994 /* UIColorInputError.swift */; };
+		259947854E20D61EE7AAC5A5A5D4DE2E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C6031AF1D67F63845EB112644DEF97D /* Foundation.framework */; };
+		26052C6B9AB2FE49BA9884A807CE12B4 /* tr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 00AAD52434A16CE41806B09399C70182 /* tr.lproj */; };
+		2D0DE4B2E54081310A744FDBFCA94185 /* pl.lproj in Resources */ = {isa = PBXBuildFile; fileRef = AF076E2E3E909C670A6B0711A3D5158D /* pl.lproj */; };
+		308155C96F523E01E9D97E4FF4C63D2D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBC351F0711CCD655C8F3E3A1F5FB6E /* UIKit.framework */; };
+		30AA8AF720FDED73D60783CFE6387271 /* ja.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 582476D5A1B62175D1EBDFB6722EFF14 /* ja.lproj */; };
+		3E1EE84617390DDED49D62A1E3E1F5C7 /* ru.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A15D2CE19ACE4A48CD90DD91A8A630E0 /* ru.lproj */; };
+		40C1C9DA08B2051865FB485E1836AD14 /* fr.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 54BC2CA787A1D9DE90F0D2A9079CD869 /* fr.lproj */; };
+		4E409D6C7574D8B2EB71DF2D2A6E7183 /* ko.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 5374D1E134F83F0D2AC0521BB00FB326 /* ko.lproj */; };
+		51C3C90455D42788941EE0FA6BD566DF /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = D2ABC7236BAF5DE606F807B7EE901998 /* en.lproj */; };
+		7BADB944831E2A96E0EC3DAF51B8BE0F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C6031AF1D67F63845EB112644DEF97D /* Foundation.framework */; };
+		7C2CB349BA532F02AA983696B3754476 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C6031AF1D67F63845EB112644DEF97D /* Foundation.framework */; };
+		8028D105201D357C1FBACC99FD9A93D0 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BC71B42431E61923831EF8358FCA98F /* Reachability.swift */; };
+		836704F7922D680A88A8A53DD9BA5C87 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C6031AF1D67F63845EB112644DEF97D /* Foundation.framework */; };
+		926428BEC124CE7F68F17C0C42110BDF /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92A81A2B38177D96832CD6B07ACBFAAA /* UIColorExtension.swift */; };
+		92856D3545BF9B701E091458CCC12EA9 /* Pods-EbolappTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F093931033E7678E5B1663BF4AF2CFC /* Pods-EbolappTests-dummy.m */; };
+		953C8E04B82408264197C920C4529AE7 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F724A39AB86DE43C54D768A0638D057 /* StringExtension.swift */; };
+		9BA60D7CD6896F4D58076F9CE0CCB778 /* ReachabilitySwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 511FAE6B4673E4DDE175F66A38AF2C6E /* ReachabilitySwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A31A53C6DABD2AB23C49E0F22C2390F8 /* ReachabilitySwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D3717028EBBD016D08FE705B48229876 /* ReachabilitySwift-dummy.m */; };
+		A33A977BA0AA851A948264BB40332C38 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 271C5B26326BF944CC1F47E9A4B22624 /* CoreTelephony.framework */; };
+		A774FD5C234EB7B156D754CE876AC328 /* Pods-EbolappUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C7CA56FD5C3B591DA3CFB81C85B430A1 /* Pods-EbolappUITests-dummy.m */; };
+		A8373D2630602F9FEE4A684899D2067B /* Pods-EbolappTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5BDFA46D0A90161C711C41830A2F7882 /* Pods-EbolappTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA4FEE0BFCEA9A3A6B8258B236325F20 /* Pods-Ebolapp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D657BE57F2FF6B2B4D1F6C4973A72BFE /* Pods-Ebolapp-dummy.m */; };
+		B9A3CB31EAAF52BEDA7388BA2523D025 /* Pods-Ebolapp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4479FE29C430B8AE765A6D16C6B5C073 /* Pods-Ebolapp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C01D27A211A0A8972CC1E767984616F1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C6031AF1D67F63845EB112644DEF97D /* Foundation.framework */; };
+		C0AF509F0D13EB23CCACF6EE034B044A /* es.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E18D4AB43BE1D1EC6DD24C58D73B8875 /* es.lproj */; };
+		C8A6780559AFAE1B2D0C9156DA072F22 /* zh-Hans.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E7F2A2A851445B598EE5D96F9EC29A10 /* zh-Hans.lproj */; };
+		CAC68992C07EFB07DDE18DAB1CD0EC2F /* HEXColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 11F95E01C826FF90F47DEE32B2108619 /* HEXColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D243A4A416932B769DCCBD166B8CC946 /* zh-Hant.lproj in Resources */ = {isa = PBXBuildFile; fileRef = E75924B2ABD33656476057792398C3A7 /* zh-Hant.lproj */; };
+		DEF2B1AC936131940C7551C7B3B9F61A /* pt.lproj in Resources */ = {isa = PBXBuildFile; fileRef = CA8FEBF3AFA0DDE4A23D88D54633D897 /* pt.lproj */; };
+		DFDA5D12CEAF4F0290DD15E77F5093A7 /* Pods-EbolappUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 215C3439B82BA2D1B8B4623156DBBF76 /* Pods-EbolappUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F041EB4EE3BC44282C8B3177F1BBA0C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C6031AF1D67F63845EB112644DEF97D /* Foundation.framework */; };
+		F217D313788F3DC28562D74F4C934CC9 /* cs.lproj in Resources */ = {isa = PBXBuildFile; fileRef = A8AADC5F9D81BE9545B26E5A41A66528 /* cs.lproj */; };
+		F5A6F69E445682EAF2156B7B1A7AD13C /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEEB9ECD456EC0FF80A04E19D2984841 /* SystemConfiguration.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		28FA3A737F4244A2070151744122FF29 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7E876FB091FC19E1C02A54EFADE2294;
+			remoteInfo = "Pods-Ebolapp";
+		};
+		56D6BFB7F4D178C634FE1B238577B1CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCD9915FE83842AE0201096155515772;
+			remoteInfo = "AppCenter-AppCenterDistributeResources";
+		};
+		638395683B955342A4E0C59451C6CBE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B08332B0C91F6CDC405644DADDB96E3C;
+			remoteInfo = LicensePlist;
+		};
+		8051BE884DD7B53E3AD4E8BCF58CFAEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0B00B2C167CD783351BD1D00BD5AD1F8;
+			remoteInfo = ReachabilitySwift;
+		};
+		A47E50D03D17C6F2D794F874BFADA543 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E798429DCFA7906F6625CCFC1088744;
+			remoteInfo = SwiftGen;
+		};
+		C4A3A2DC6B985FD009176E1C54CBC75E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A3282A5B2437E609EEB85861D7ECE717;
+			remoteInfo = AppCenter;
+		};
+		C947278A4C9D8EDE997DED6805E67C63 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
+			remoteInfo = SwiftLint;
+		};
+		EFA6D59B672F4DF82A18C616B1631994 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0CA3B0841360687C00D0E48D3E4C1B9;
+			remoteInfo = UIColor_Hex_Swift;
+		};
+		F7F21D44341DBD07E0E3D06196F84797 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0CA3B0841360687C00D0E48D3E4C1B9;
+			remoteInfo = UIColor_Hex_Swift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		006BBB0079B288E943BD024F913A96E8 /* UIColor_Hex_Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor_Hex_Swift-prefix.pch"; sourceTree = "<group>"; };
+		00AAD52434A16CE41806B09399C70182 /* tr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = tr.lproj; path = "AppCenter-SDK-Apple/iOS/AppCenterDistributeResources.bundle/tr.lproj"; sourceTree = "<group>"; };
+		022FCE57E419F847A6658ECD49BD3055 /* Pods-EbolappWidgetExtension-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EbolappWidgetExtension-Info.plist"; sourceTree = "<group>"; };
+		033F2E752FA756357758249FD8544A45 /* Pods-EbolappTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EbolappTests.debug.xcconfig"; sourceTree = "<group>"; };
+		049794E9171160892A41E81B339BE2C4 /* Pods-Ebolapp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Ebolapp-resources.sh"; sourceTree = "<group>"; };
+		09D662CB45F6374224F11796B0FB9D6C /* de.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = de.lproj; path = "AppCenter-SDK-Apple/iOS/AppCenterDistributeResources.bundle/de.lproj"; sourceTree = "<group>"; };
+		0B72136627E5A7092A5A469109935693 /* Pods-EbolappTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EbolappTests-Info.plist"; sourceTree = "<group>"; };
+		0CF24DE6F9104C375C1C69BB391E2989 /* Pods_EbolappWidgetExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EbolappWidgetExtension.framework; path = "Pods-EbolappWidgetExtension.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D8922E389A50287D99D169F142852E1 /* Pods-EbolappWidgetExtension-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EbolappWidgetExtension-acknowledgements.markdown"; sourceTree = "<group>"; };
+		11AF731E4071DCD5E34B4CA294302B92 /* AppCenterDistributeResources.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = AppCenterDistributeResources.bundle; path = "AppCenter-AppCenterDistributeResources.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		11F95E01C826FF90F47DEE32B2108619 /* HEXColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HEXColor.h; path = HEXColor/HEXColor.h; sourceTree = "<group>"; };
+		12979AE88E1742B35C2736D32425DD60 /* Pods-EbolappWidgetExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EbolappWidgetExtension.debug.xcconfig"; sourceTree = "<group>"; };
+		1367B0E1CEBF5729E83A17B3DCCAD504 /* Pods-EbolappWidgetExtension.enterprise.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EbolappWidgetExtension.enterprise.xcconfig"; sourceTree = "<group>"; };
+		141307425E769E9B833BD74EC9D0F7B2 /* Pods-Ebolapp.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Ebolapp.adhoc.xcconfig"; sourceTree = "<group>"; };
+		154A4A22A5E4C56197CA26EAF3C5B075 /* Pods-EbolappTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EbolappTests.modulemap"; sourceTree = "<group>"; };
+		1888FAF3177EB343E4D1A59419EA10CB /* AppCenter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AppCenter.debug.xcconfig; sourceTree = "<group>"; };
+		1B37F9749326679C75DA663ED2406CA8 /* Pods-EbolappUITests.enterprise.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EbolappUITests.enterprise.xcconfig"; sourceTree = "<group>"; };
+		1C299D105F4721BB5B1E5D46A6E2A199 /* ReachabilitySwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ReachabilitySwift-Info.plist"; sourceTree = "<group>"; };
+		215C3439B82BA2D1B8B4623156DBBF76 /* Pods-EbolappUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EbolappUITests-umbrella.h"; sourceTree = "<group>"; };
+		21B03CA622E690725A6626C088E1D09F /* Reachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Reachability.framework; path = ReachabilitySwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		271C5B26326BF944CC1F47E9A4B22624 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
+		2C14958CB754C29F27B9C795BA00B290 /* Pods_EbolappUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EbolappUITests.framework; path = "Pods-EbolappUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2D210735821BF98178F73170308DFEA0 /* AppCenterCrashes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenterCrashes.framework; path = "AppCenter-SDK-Apple/iOS/AppCenterCrashes.framework"; sourceTree = "<group>"; };
+		2F655655DF2DD5586E468CF671C9F4CC /* SwiftLint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.debug.xcconfig; sourceTree = "<group>"; };
+		324D5DA331679A455E15385979D80D10 /* it.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = it.lproj; path = "AppCenter-SDK-Apple/iOS/AppCenterDistributeResources.bundle/it.lproj"; sourceTree = "<group>"; };
+		3F724A39AB86DE43C54D768A0638D057 /* StringExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtension.swift; path = HEXColor/StringExtension.swift; sourceTree = "<group>"; };
+		41AD0FA8A54EBE0822B159032E4C2515 /* LicensePlist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LicensePlist.debug.xcconfig; sourceTree = "<group>"; };
+		4479FE29C430B8AE765A6D16C6B5C073 /* Pods-Ebolapp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Ebolapp-umbrella.h"; sourceTree = "<group>"; };
+		4A4C702F7B147D821E6E65E9452D3583 /* LicensePlist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LicensePlist.release.xcconfig; sourceTree = "<group>"; };
+		4BC71B42431E61923831EF8358FCA98F /* Reachability.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Reachability.swift; path = Sources/Reachability.swift; sourceTree = "<group>"; };
+		511FAE6B4673E4DDE175F66A38AF2C6E /* ReachabilitySwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ReachabilitySwift-umbrella.h"; sourceTree = "<group>"; };
+		5323F8881F4B6420601018199742EBF2 /* Pods-EbolappWidgetExtension-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EbolappWidgetExtension-acknowledgements.plist"; sourceTree = "<group>"; };
+		5374D1E134F83F0D2AC0521BB00FB326 /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ko.lproj; path = "AppCenter-SDK-Apple/iOS/AppCenterDistributeResources.bundle/ko.lproj"; sourceTree = "<group>"; };
+		5414A27B2F4F1A3C790D7AC546AC9E12 /* Pods-Ebolapp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Ebolapp-Info.plist"; sourceTree = "<group>"; };
+		54BC2CA787A1D9DE90F0D2A9079CD869 /* fr.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = fr.lproj; path = "AppCenter-SDK-Apple/iOS/AppCenterDistributeResources.bundle/fr.lproj"; sourceTree = "<group>"; };
+		582476D5A1B62175D1EBDFB6722EFF14 /* ja.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ja.lproj; path = "AppCenter-SDK-Apple/iOS/AppCenterDistributeResources.bundle/ja.lproj"; sourceTree = "<group>"; };
+		58FA08FD4595D3CA9B2AA81405DE2EFA /* UIColor_Hex_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UIColor_Hex_Swift.framework; path = UIColor_Hex_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B9AB2A5256EAB02D65514602488B2BD /* UIColor_Hex_Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = UIColor_Hex_Swift.modulemap; sourceTree = "<group>"; };
+		5BDFA46D0A90161C711C41830A2F7882 /* Pods-EbolappTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EbolappTests-umbrella.h"; sourceTree = "<group>"; };
+		5EEB2148FFAB07B4AD821E2AB45A28A1 /* Pods-EbolappUITests.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EbolappUITests.adhoc.xcconfig"; sourceTree = "<group>"; };
+		5F093931033E7678E5B1663BF4AF2CFC /* Pods-EbolappTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EbolappTests-dummy.m"; sourceTree = "<group>"; };
+		622F46BE29C7E3208B4F7EB797F56B94 /* Pods-EbolappWidgetExtension.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EbolappWidgetExtension.appstore.xcconfig"; sourceTree = "<group>"; };
+		6C354E365B531F8C0B177A774B511556 /* Pods-EbolappUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EbolappUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6EC8B088D2D99519933B3361B6586C60 /* Pods-EbolappUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EbolappUITests.modulemap"; sourceTree = "<group>"; };
+		75CF50ED7BF2E2A60E87EEEC9DADA1BF /* Pods-EbolappWidgetExtension-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EbolappWidgetExtension-dummy.m"; sourceTree = "<group>"; };
+		75E226350B42BF9E0D88E7473EDAEB4D /* Pods-Ebolapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Ebolapp.debug.xcconfig"; sourceTree = "<group>"; };
+		78A0EA8B3B37E4DA0F254AEFA4560EC3 /* Pods-EbolappTests.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EbolappTests.appstore.xcconfig"; sourceTree = "<group>"; };
+		79DC98A1CBC9FEE82D6952B7411B5641 /* Pods-EbolappTests.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EbolappTests.adhoc.xcconfig"; sourceTree = "<group>"; };
+		7AFB58E74E458B11784855D030E0917B /* AppCenterDistribute.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenterDistribute.framework; path = "AppCenter-SDK-Apple/iOS/AppCenterDistribute.framework"; sourceTree = "<group>"; };
+		7B4EE5DD2068C5EC0FB5258B7217D4D7 /* Pods-EbolappUITests.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EbolappUITests.appstore.xcconfig"; sourceTree = "<group>"; };
+		7C05AA10E334A6CD1520CA275CD6B814 /* AppCenter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AppCenter.release.xcconfig; sourceTree = "<group>"; };
+		81430AB148D7B0BC93C1C887F317B2F1 /* Pods-Ebolapp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Ebolapp-frameworks.sh"; sourceTree = "<group>"; };
+		8740EE60965507DE5A09757E92C58590 /* Pods-Ebolapp.appstore.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Ebolapp.appstore.xcconfig"; sourceTree = "<group>"; };
+		8C6031AF1D67F63845EB112644DEF97D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		8CBC351F0711CCD655C8F3E3A1F5FB6E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		8DCD7399D744857357F79B93F974E8C2 /* Pods-EbolappWidgetExtension.adhoc.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EbolappWidgetExtension.adhoc.xcconfig"; sourceTree = "<group>"; };
+		8F0C5C0F08D73D44694A76FE26FDE740 /* SwiftLint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.release.xcconfig; sourceTree = "<group>"; };
+		9049B156E946223693BF3E4AFDF68A5A /* Pods-EbolappWidgetExtension-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EbolappWidgetExtension-umbrella.h"; sourceTree = "<group>"; };
+		91D239F886B77EF6FBA5D39CD74F4994 /* UIColorInputError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIColorInputError.swift; path = HEXColor/UIColorInputError.swift; sourceTree = "<group>"; };
+		92A81A2B38177D96832CD6B07ACBFAAA /* UIColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = HEXColor/UIColorExtension.swift; sourceTree = "<group>"; };
+		93D44F83A99972CFFA58BB2D93E16F89 /* Pods_Ebolapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Ebolapp.framework; path = "Pods-Ebolapp.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		94E587FC8D36C600A8CFB1E3DF31AC14 /* UIColor_Hex_Swift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UIColor_Hex_Swift-Info.plist"; sourceTree = "<group>"; };
+		9784DEB00CDFEFBFB0A97CB24C2369E5 /* AppCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenter.framework; path = "AppCenter-SDK-Apple/iOS/AppCenter.framework"; sourceTree = "<group>"; };
+		97FD3E47D29BED5656EE4D3A61E40EB8 /* ReachabilitySwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ReachabilitySwift.release.xcconfig; sourceTree = "<group>"; };
+		9ABA11F9B94474BE2E0C499A62E83515 /* Pods-Ebolapp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Ebolapp-acknowledgements.plist"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A15D2CE19ACE4A48CD90DD91A8A630E0 /* ru.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = ru.lproj; path = "AppCenter-SDK-Apple/iOS/AppCenterDistributeResources.bundle/ru.lproj"; sourceTree = "<group>"; };
+		A76545E4313FC09EC5DF17CD582811F6 /* ReachabilitySwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ReachabilitySwift.modulemap; sourceTree = "<group>"; };
+		A8AADC5F9D81BE9545B26E5A41A66528 /* cs.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = cs.lproj; path = "AppCenter-SDK-Apple/iOS/AppCenterDistributeResources.bundle/cs.lproj"; sourceTree = "<group>"; };
+		AAEE9D6B2A4DFA174A0891EA660A67C6 /* ReachabilitySwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ReachabilitySwift.debug.xcconfig; sourceTree = "<group>"; };
+		AB3E3D3717E878E43FB7CD1D2EB8AC1D /* Pods-Ebolapp.enterprise.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Ebolapp.enterprise.xcconfig"; sourceTree = "<group>"; };
+		AF076E2E3E909C670A6B0711A3D5158D /* pl.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = pl.lproj; path = "AppCenter-SDK-Apple/iOS/AppCenterDistributeResources.bundle/pl.lproj"; sourceTree = "<group>"; };
+		B3A84BBC422A87ACFE1E69143E24DE91 /* UIColor_Hex_Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UIColor_Hex_Swift.debug.xcconfig; sourceTree = "<group>"; };
+		B422D4E801BBBBB8F593E9E31CD703B3 /* Pods-EbolappTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EbolappTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B50E7495E7E1EA522D5D465237835BF8 /* Pods-EbolappUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EbolappUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		BED7F2B8FBD0E70FA0E0ADC025F09408 /* UIColor_Hex_Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = UIColor_Hex_Swift.release.xcconfig; sourceTree = "<group>"; };
+		C7C46334C0B18CA7E34F0624F648A5B6 /* Pods-EbolappTests.enterprise.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EbolappTests.enterprise.xcconfig"; sourceTree = "<group>"; };
+		C7CA56FD5C3B591DA3CFB81C85B430A1 /* Pods-EbolappUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EbolappUITests-dummy.m"; sourceTree = "<group>"; };
+		C99A072B49EBA90D19868E117C2E6ADD /* Pods-EbolappUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EbolappUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		CA8FEBF3AFA0DDE4A23D88D54633D897 /* pt.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = pt.lproj; path = "AppCenter-SDK-Apple/iOS/AppCenterDistributeResources.bundle/pt.lproj"; sourceTree = "<group>"; };
+		CEA864A500A9ED9E8571977CB1CA43BA /* ReachabilitySwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ReachabilitySwift-prefix.pch"; sourceTree = "<group>"; };
+		CEEB9ECD456EC0FF80A04E19D2984841 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		CF2F7F17DAEB63C69DBEBB088D88083F /* UIColor_Hex_Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor_Hex_Swift-umbrella.h"; sourceTree = "<group>"; };
+		D0A2C8A0E18CD1E5B3E1C36E78A27B2D /* UIColor_Hex_Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor_Hex_Swift-dummy.m"; sourceTree = "<group>"; };
+		D286D5573EF662A6547676B4CD8B9D63 /* Pods_EbolappTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EbolappTests.framework; path = "Pods-EbolappTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2ABC7236BAF5DE606F807B7EE901998 /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = en.lproj; path = "AppCenter-SDK-Apple/iOS/AppCenterDistributeResources.bundle/en.lproj"; sourceTree = "<group>"; };
+		D3717028EBBD016D08FE705B48229876 /* ReachabilitySwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ReachabilitySwift-dummy.m"; sourceTree = "<group>"; };
+		D563753205322FA29D58186E6B2ACF7B /* Pods-EbolappWidgetExtension.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-EbolappWidgetExtension.modulemap"; sourceTree = "<group>"; };
+		D5E37B0A98671CED5090DCF43B630E8E /* ResourceBundle-AppCenterDistributeResources-AppCenter-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-AppCenterDistributeResources-AppCenter-Info.plist"; sourceTree = "<group>"; };
+		D657BE57F2FF6B2B4D1F6C4973A72BFE /* Pods-Ebolapp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Ebolapp-dummy.m"; sourceTree = "<group>"; };
+		D9B00DB2E9A78FAC5249268243F58790 /* Pods-EbolappTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EbolappTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		DBA9F0E7711069C30AD7C6D148644549 /* Pods-Ebolapp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Ebolapp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		E18D4AB43BE1D1EC6DD24C58D73B8875 /* es.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = es.lproj; path = "AppCenter-SDK-Apple/iOS/AppCenterDistributeResources.bundle/es.lproj"; sourceTree = "<group>"; };
+		E3539A17EFB61A63E02094F3BC8C0B91 /* SwiftGen.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftGen.debug.xcconfig; sourceTree = "<group>"; };
+		E75924B2ABD33656476057792398C3A7 /* zh-Hant.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hant.lproj"; path = "AppCenter-SDK-Apple/iOS/AppCenterDistributeResources.bundle/zh-Hant.lproj"; sourceTree = "<group>"; };
+		E7F2A2A851445B598EE5D96F9EC29A10 /* zh-Hans.lproj */ = {isa = PBXFileReference; includeInIndex = 1; name = "zh-Hans.lproj"; path = "AppCenter-SDK-Apple/iOS/AppCenterDistributeResources.bundle/zh-Hans.lproj"; sourceTree = "<group>"; };
+		EACC6FACB26EE7A5DD5F8D17EB7D5752 /* Pods-EbolappUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EbolappUITests-Info.plist"; sourceTree = "<group>"; };
+		ED6B972D1E36090234C2184A5BC3C78A /* Pods-Ebolapp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Ebolapp.modulemap"; sourceTree = "<group>"; };
+		F098452B8CC86030B3CD86B00304ADB8 /* SwiftGen.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftGen.release.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2CD26E208B1EE5F8C284F075C3F4823D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BADB944831E2A96E0EC3DAF51B8BE0F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41D4BDEE7349B810688D8A884983FDF0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				836704F7922D680A88A8A53DD9BA5C87 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D08E9402FA23DE527E8F3FAE6E4AD692 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3A731B9441C6215416BBC7613CF857A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C2CB349BA532F02AA983696B3754476 /* Foundation.framework in Frameworks */,
+				308155C96F523E01E9D97E4FF4C63D2D /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E1E11C708ED422226D18ECC301C9E60F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A33A977BA0AA851A948264BB40332C38 /* CoreTelephony.framework in Frameworks */,
+				C01D27A211A0A8972CC1E767984616F1 /* Foundation.framework in Frameworks */,
+				F5A6F69E445682EAF2156B7B1A7AD13C /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED05BFC9AE25EDB1AE0CAF3C4C07E32A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F041EB4EE3BC44282C8B3177F1BBA0C7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA0F6097EEF82C0C9AC6BC5E5C627F1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				259947854E20D61EE7AAC5A5A5D4DE2E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		071C2E1D0C95B4A005ED9553AEC058F5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E3539A17EFB61A63E02094F3BC8C0B91 /* SwiftGen.debug.xcconfig */,
+				F098452B8CC86030B3CD86B00304ADB8 /* SwiftGen.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftGen";
+			sourceTree = "<group>";
+		};
+		0A20120532E006A7C30B8C56A457950E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1888FAF3177EB343E4D1A59419EA10CB /* AppCenter.debug.xcconfig */,
+				7C05AA10E334A6CD1520CA275CD6B814 /* AppCenter.release.xcconfig */,
+				D5E37B0A98671CED5090DCF43B630E8E /* ResourceBundle-AppCenterDistributeResources-AppCenter-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AppCenter";
+			sourceTree = "<group>";
+		};
+		146228D3F04101DBC80B20F1C36B98F2 /* ReachabilitySwift */ = {
+			isa = PBXGroup;
+			children = (
+				4BC71B42431E61923831EF8358FCA98F /* Reachability.swift */,
+				78FC0F8C1CB598A1971B6078F413B251 /* Support Files */,
+			);
+			name = ReachabilitySwift;
+			path = ReachabilitySwift;
+			sourceTree = "<group>";
+		};
+		2D53BF0D17B76CC9F0BE2D8A4B68EEEA /* Pods-EbolappTests */ = {
+			isa = PBXGroup;
+			children = (
+				154A4A22A5E4C56197CA26EAF3C5B075 /* Pods-EbolappTests.modulemap */,
+				B422D4E801BBBBB8F593E9E31CD703B3 /* Pods-EbolappTests-acknowledgements.markdown */,
+				D9B00DB2E9A78FAC5249268243F58790 /* Pods-EbolappTests-acknowledgements.plist */,
+				5F093931033E7678E5B1663BF4AF2CFC /* Pods-EbolappTests-dummy.m */,
+				0B72136627E5A7092A5A469109935693 /* Pods-EbolappTests-Info.plist */,
+				5BDFA46D0A90161C711C41830A2F7882 /* Pods-EbolappTests-umbrella.h */,
+				79DC98A1CBC9FEE82D6952B7411B5641 /* Pods-EbolappTests.adhoc.xcconfig */,
+				78A0EA8B3B37E4DA0F254AEFA4560EC3 /* Pods-EbolappTests.appstore.xcconfig */,
+				033F2E752FA756357758249FD8544A45 /* Pods-EbolappTests.debug.xcconfig */,
+				C7C46334C0B18CA7E34F0624F648A5B6 /* Pods-EbolappTests.enterprise.xcconfig */,
+			);
+			name = "Pods-EbolappTests";
+			path = "Target Support Files/Pods-EbolappTests";
+			sourceTree = "<group>";
+		};
+		2FA5B50750D1374115F91E914132ADEA /* LicensePlist */ = {
+			isa = PBXGroup;
+			children = (
+				BC07430A145883BBE57EE51ED9D3B859 /* Support Files */,
+			);
+			name = LicensePlist;
+			path = LicensePlist;
+			sourceTree = "<group>";
+		};
+		38B14D3E29480C18BCDA9CFCB077DEFF /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DAC5E5448F854609D8D0867DBBD511DC /* Pods-Ebolapp */,
+				2D53BF0D17B76CC9F0BE2D8A4B68EEEA /* Pods-EbolappTests */,
+				E84C3A1A3C70EAC92A80D3BC16088548 /* Pods-EbolappUITests */,
+				ECC85C8DDBA13434FA8924FDBC3C2746 /* Pods-EbolappWidgetExtension */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		664EF9589FE28DAA5C54C262AC786C4A /* SwiftGen */ = {
+			isa = PBXGroup;
+			children = (
+				071C2E1D0C95B4A005ED9553AEC058F5 /* Support Files */,
+			);
+			name = SwiftGen;
+			path = SwiftGen;
+			sourceTree = "<group>";
+		};
+		687FE9E13FCA47B1C7690C596D2995EC /* Distribute */ = {
+			isa = PBXGroup;
+			children = (
+				AD19168964A4E3ACBA0BBD3905BB99CE /* Frameworks */,
+				CBEBF628705735F864E8F3CFB9EDB8A3 /* Resources */,
+			);
+			name = Distribute;
+			sourceTree = "<group>";
+		};
+		78FC0F8C1CB598A1971B6078F413B251 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A76545E4313FC09EC5DF17CD582811F6 /* ReachabilitySwift.modulemap */,
+				D3717028EBBD016D08FE705B48229876 /* ReachabilitySwift-dummy.m */,
+				1C299D105F4721BB5B1E5D46A6E2A199 /* ReachabilitySwift-Info.plist */,
+				CEA864A500A9ED9E8571977CB1CA43BA /* ReachabilitySwift-prefix.pch */,
+				511FAE6B4673E4DDE175F66A38AF2C6E /* ReachabilitySwift-umbrella.h */,
+				AAEE9D6B2A4DFA174A0891EA660A67C6 /* ReachabilitySwift.debug.xcconfig */,
+				97FD3E47D29BED5656EE4D3A61E40EB8 /* ReachabilitySwift.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ReachabilitySwift";
+			sourceTree = "<group>";
+		};
+		82CC0C4BC1A62C546A16BC5438ECADBE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2D210735821BF98178F73170308DFEA0 /* AppCenterCrashes.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8D8433AEC4928E77C9F2E3F59251D676 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2F655655DF2DD5586E468CF671C9F4CC /* SwiftLint.debug.xcconfig */,
+				8F0C5C0F08D73D44694A76FE26FDE740 /* SwiftLint.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftLint";
+			sourceTree = "<group>";
+		};
+		8E04686A5C6CB8360BFE68FF4D78F491 /* SwiftLint */ = {
+			isa = PBXGroup;
+			children = (
+				8D8433AEC4928E77C9F2E3F59251D676 /* Support Files */,
+			);
+			name = SwiftLint;
+			path = SwiftLint;
+			sourceTree = "<group>";
+		};
+		8E3E6EF957B1A4A72A643E43E1D702B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9784DEB00CDFEFBFB0A97CB24C2369E5 /* AppCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8FDAD52FDA7C1770BDA28003C79D6F2A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A3446220CB437EE9CCB18BCC5A0DF2FE /* AppCenter */,
+				2FA5B50750D1374115F91E914132ADEA /* LicensePlist */,
+				146228D3F04101DBC80B20F1C36B98F2 /* ReachabilitySwift */,
+				664EF9589FE28DAA5C54C262AC786C4A /* SwiftGen */,
+				8E04686A5C6CB8360BFE68FF4D78F491 /* SwiftLint */,
+				92949D03EC5DEA96780FC55FCE26C900 /* UIColor_Hex_Swift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		92949D03EC5DEA96780FC55FCE26C900 /* UIColor_Hex_Swift */ = {
+			isa = PBXGroup;
+			children = (
+				11F95E01C826FF90F47DEE32B2108619 /* HEXColor.h */,
+				3F724A39AB86DE43C54D768A0638D057 /* StringExtension.swift */,
+				92A81A2B38177D96832CD6B07ACBFAAA /* UIColorExtension.swift */,
+				91D239F886B77EF6FBA5D39CD74F4994 /* UIColorInputError.swift */,
+				972865714E4472059FD7A5DDDD861059 /* Support Files */,
+			);
+			name = UIColor_Hex_Swift;
+			path = UIColor_Hex_Swift;
+			sourceTree = "<group>";
+		};
+		972865714E4472059FD7A5DDDD861059 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5B9AB2A5256EAB02D65514602488B2BD /* UIColor_Hex_Swift.modulemap */,
+				D0A2C8A0E18CD1E5B3E1C36E78A27B2D /* UIColor_Hex_Swift-dummy.m */,
+				94E587FC8D36C600A8CFB1E3DF31AC14 /* UIColor_Hex_Swift-Info.plist */,
+				006BBB0079B288E943BD024F913A96E8 /* UIColor_Hex_Swift-prefix.pch */,
+				CF2F7F17DAEB63C69DBEBB088D88083F /* UIColor_Hex_Swift-umbrella.h */,
+				B3A84BBC422A87ACFE1E69143E24DE91 /* UIColor_Hex_Swift.debug.xcconfig */,
+				BED7F2B8FBD0E70FA0E0ADC025F09408 /* UIColor_Hex_Swift.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UIColor_Hex_Swift";
+			sourceTree = "<group>";
+		};
+		A3446220CB437EE9CCB18BCC5A0DF2FE /* AppCenter */ = {
+			isa = PBXGroup;
+			children = (
+				E629EDA2C24CEE1017683C266DB8CEB9 /* Core */,
+				EF3CF384FBA9695E6E83F86610EBDFF0 /* Crashes */,
+				687FE9E13FCA47B1C7690C596D2995EC /* Distribute */,
+				0A20120532E006A7C30B8C56A457950E /* Support Files */,
+			);
+			name = AppCenter;
+			path = AppCenter;
+			sourceTree = "<group>";
+		};
+		A6459EEAF75A01900BEE7522939EA1F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				11AF731E4071DCD5E34B4CA294302B92 /* AppCenterDistributeResources.bundle */,
+				93D44F83A99972CFFA58BB2D93E16F89 /* Pods_Ebolapp.framework */,
+				D286D5573EF662A6547676B4CD8B9D63 /* Pods_EbolappTests.framework */,
+				2C14958CB754C29F27B9C795BA00B290 /* Pods_EbolappUITests.framework */,
+				0CF24DE6F9104C375C1C69BB391E2989 /* Pods_EbolappWidgetExtension.framework */,
+				21B03CA622E690725A6626C088E1D09F /* Reachability.framework */,
+				58FA08FD4595D3CA9B2AA81405DE2EFA /* UIColor_Hex_Swift.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AD19168964A4E3ACBA0BBD3905BB99CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7AFB58E74E458B11784855D030E0917B /* AppCenterDistribute.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB85CA8380378B2C8CBB59305473FDCC /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC07430A145883BBE57EE51ED9D3B859 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				41AD0FA8A54EBE0822B159032E4C2515 /* LicensePlist.debug.xcconfig */,
+				4A4C702F7B147D821E6E65E9452D3583 /* LicensePlist.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LicensePlist";
+			sourceTree = "<group>";
+		};
+		CBEBF628705735F864E8F3CFB9EDB8A3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A8AADC5F9D81BE9545B26E5A41A66528 /* cs.lproj */,
+				09D662CB45F6374224F11796B0FB9D6C /* de.lproj */,
+				D2ABC7236BAF5DE606F807B7EE901998 /* en.lproj */,
+				E18D4AB43BE1D1EC6DD24C58D73B8875 /* es.lproj */,
+				54BC2CA787A1D9DE90F0D2A9079CD869 /* fr.lproj */,
+				324D5DA331679A455E15385979D80D10 /* it.lproj */,
+				582476D5A1B62175D1EBDFB6722EFF14 /* ja.lproj */,
+				5374D1E134F83F0D2AC0521BB00FB326 /* ko.lproj */,
+				AF076E2E3E909C670A6B0711A3D5158D /* pl.lproj */,
+				CA8FEBF3AFA0DDE4A23D88D54633D897 /* pt.lproj */,
+				A15D2CE19ACE4A48CD90DD91A8A630E0 /* ru.lproj */,
+				00AAD52434A16CE41806B09399C70182 /* tr.lproj */,
+				E7F2A2A851445B598EE5D96F9EC29A10 /* zh-Hans.lproj */,
+				E75924B2ABD33656476057792398C3A7 /* zh-Hant.lproj */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
+				8FDAD52FDA7C1770BDA28003C79D6F2A /* Pods */,
+				A6459EEAF75A01900BEE7522939EA1F9 /* Products */,
+				38B14D3E29480C18BCDA9CFCB077DEFF /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		DAC5E5448F854609D8D0867DBBD511DC /* Pods-Ebolapp */ = {
+			isa = PBXGroup;
+			children = (
+				ED6B972D1E36090234C2184A5BC3C78A /* Pods-Ebolapp.modulemap */,
+				DBA9F0E7711069C30AD7C6D148644549 /* Pods-Ebolapp-acknowledgements.markdown */,
+				9ABA11F9B94474BE2E0C499A62E83515 /* Pods-Ebolapp-acknowledgements.plist */,
+				D657BE57F2FF6B2B4D1F6C4973A72BFE /* Pods-Ebolapp-dummy.m */,
+				81430AB148D7B0BC93C1C887F317B2F1 /* Pods-Ebolapp-frameworks.sh */,
+				5414A27B2F4F1A3C790D7AC546AC9E12 /* Pods-Ebolapp-Info.plist */,
+				049794E9171160892A41E81B339BE2C4 /* Pods-Ebolapp-resources.sh */,
+				4479FE29C430B8AE765A6D16C6B5C073 /* Pods-Ebolapp-umbrella.h */,
+				141307425E769E9B833BD74EC9D0F7B2 /* Pods-Ebolapp.adhoc.xcconfig */,
+				8740EE60965507DE5A09757E92C58590 /* Pods-Ebolapp.appstore.xcconfig */,
+				75E226350B42BF9E0D88E7473EDAEB4D /* Pods-Ebolapp.debug.xcconfig */,
+				AB3E3D3717E878E43FB7CD1D2EB8AC1D /* Pods-Ebolapp.enterprise.xcconfig */,
+			);
+			name = "Pods-Ebolapp";
+			path = "Target Support Files/Pods-Ebolapp";
+			sourceTree = "<group>";
+		};
+		E629EDA2C24CEE1017683C266DB8CEB9 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8E3E6EF957B1A4A72A643E43E1D702B3 /* Frameworks */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		E84C3A1A3C70EAC92A80D3BC16088548 /* Pods-EbolappUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6EC8B088D2D99519933B3361B6586C60 /* Pods-EbolappUITests.modulemap */,
+				6C354E365B531F8C0B177A774B511556 /* Pods-EbolappUITests-acknowledgements.markdown */,
+				B50E7495E7E1EA522D5D465237835BF8 /* Pods-EbolappUITests-acknowledgements.plist */,
+				C7CA56FD5C3B591DA3CFB81C85B430A1 /* Pods-EbolappUITests-dummy.m */,
+				EACC6FACB26EE7A5DD5F8D17EB7D5752 /* Pods-EbolappUITests-Info.plist */,
+				215C3439B82BA2D1B8B4623156DBBF76 /* Pods-EbolappUITests-umbrella.h */,
+				5EEB2148FFAB07B4AD821E2AB45A28A1 /* Pods-EbolappUITests.adhoc.xcconfig */,
+				7B4EE5DD2068C5EC0FB5258B7217D4D7 /* Pods-EbolappUITests.appstore.xcconfig */,
+				C99A072B49EBA90D19868E117C2E6ADD /* Pods-EbolappUITests.debug.xcconfig */,
+				1B37F9749326679C75DA663ED2406CA8 /* Pods-EbolappUITests.enterprise.xcconfig */,
+			);
+			name = "Pods-EbolappUITests";
+			path = "Target Support Files/Pods-EbolappUITests";
+			sourceTree = "<group>";
+		};
+		EB85CA8380378B2C8CBB59305473FDCC /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				271C5B26326BF944CC1F47E9A4B22624 /* CoreTelephony.framework */,
+				8C6031AF1D67F63845EB112644DEF97D /* Foundation.framework */,
+				CEEB9ECD456EC0FF80A04E19D2984841 /* SystemConfiguration.framework */,
+				8CBC351F0711CCD655C8F3E3A1F5FB6E /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		ECC85C8DDBA13434FA8924FDBC3C2746 /* Pods-EbolappWidgetExtension */ = {
+			isa = PBXGroup;
+			children = (
+				D563753205322FA29D58186E6B2ACF7B /* Pods-EbolappWidgetExtension.modulemap */,
+				0D8922E389A50287D99D169F142852E1 /* Pods-EbolappWidgetExtension-acknowledgements.markdown */,
+				5323F8881F4B6420601018199742EBF2 /* Pods-EbolappWidgetExtension-acknowledgements.plist */,
+				75CF50ED7BF2E2A60E87EEEC9DADA1BF /* Pods-EbolappWidgetExtension-dummy.m */,
+				022FCE57E419F847A6658ECD49BD3055 /* Pods-EbolappWidgetExtension-Info.plist */,
+				9049B156E946223693BF3E4AFDF68A5A /* Pods-EbolappWidgetExtension-umbrella.h */,
+				8DCD7399D744857357F79B93F974E8C2 /* Pods-EbolappWidgetExtension.adhoc.xcconfig */,
+				622F46BE29C7E3208B4F7EB797F56B94 /* Pods-EbolappWidgetExtension.appstore.xcconfig */,
+				12979AE88E1742B35C2736D32425DD60 /* Pods-EbolappWidgetExtension.debug.xcconfig */,
+				1367B0E1CEBF5729E83A17B3DCCAD504 /* Pods-EbolappWidgetExtension.enterprise.xcconfig */,
+			);
+			name = "Pods-EbolappWidgetExtension";
+			path = "Target Support Files/Pods-EbolappWidgetExtension";
+			sourceTree = "<group>";
+		};
+		EF3CF384FBA9695E6E83F86610EBDFF0 /* Crashes */ = {
+			isa = PBXGroup;
+			children = (
+				82CC0C4BC1A62C546A16BC5438ECADBE /* Frameworks */,
+			);
+			name = Crashes;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		285559F160D600FAABFE8B26D1079555 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFDA5D12CEAF4F0290DD15E77F5093A7 /* Pods-EbolappUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		54A4BE12F32AFB564E54A0925E9D8FC6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BA60D7CD6896F4D58076F9CE0CCB778 /* ReachabilitySwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		57CE30EBBEB7359B07F7806467A29D95 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAC68992C07EFB07DDE18DAB1CD0EC2F /* HEXColor.h in Headers */,
+				033EFDC61B9B341F1D3430F1FFD7E11A /* UIColor_Hex_Swift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		677274841CB8094BD364DDC9BEF36202 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9A3CB31EAAF52BEDA7388BA2523D025 /* Pods-Ebolapp-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		76E320E1892CA5B9750226C97C1ED158 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19144D363C2B74EACFCD813DEBEA9B48 /* Pods-EbolappWidgetExtension-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A00020F87347E0C11D1FBD45D68B02FE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A8373D2630602F9FEE4A684899D2067B /* Pods-EbolappTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0B00B2C167CD783351BD1D00BD5AD1F8 /* ReachabilitySwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 036ED74044D519437C4F48D5D8228A28 /* Build configuration list for PBXNativeTarget "ReachabilitySwift" */;
+			buildPhases = (
+				54A4BE12F32AFB564E54A0925E9D8FC6 /* Headers */,
+				47E9B78346D541D518E2DFB4791D94F6 /* Sources */,
+				E1E11C708ED422226D18ECC301C9E60F /* Frameworks */,
+				8E5519FF8D9D604FA736EAFEA3D5E82B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReachabilitySwift;
+			productName = ReachabilitySwift;
+			productReference = 21B03CA622E690725A6626C088E1D09F /* Reachability.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5C0EAB91D1E173413CE12C9F4181EC12 /* Pods-EbolappUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D44EF12EC46C0583B519F0300DF018F7 /* Build configuration list for PBXNativeTarget "Pods-EbolappUITests" */;
+			buildPhases = (
+				285559F160D600FAABFE8B26D1079555 /* Headers */,
+				7A1A109BB1A71E8E6620C9E5577782EB /* Sources */,
+				41D4BDEE7349B810688D8A884983FDF0 /* Frameworks */,
+				DE29E6A1AB47E1CD6B2D3F7D8A0EC2AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-EbolappUITests";
+			productName = "Pods-EbolappUITests";
+			productReference = 2C14958CB754C29F27B9C795BA00B290 /* Pods_EbolappUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A0CA3B0841360687C00D0E48D3E4C1B9 /* UIColor_Hex_Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A7D0029EC46BACC7BE5426107557B485 /* Build configuration list for PBXNativeTarget "UIColor_Hex_Swift" */;
+			buildPhases = (
+				57CE30EBBEB7359B07F7806467A29D95 /* Headers */,
+				9189BAAE78390B6142A70609FA7150D0 /* Sources */,
+				D3A731B9441C6215416BBC7613CF857A /* Frameworks */,
+				9078A378BF2E5003CFD1D2273E1138EA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIColor_Hex_Swift;
+			productName = UIColor_Hex_Swift;
+			productReference = 58FA08FD4595D3CA9B2AA81405DE2EFA /* UIColor_Hex_Swift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BBA8790273D5C3E20AEDF44F5B3B9D2A /* Pods-EbolappTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E3518BA491D6D608E62E83F7BF5A313 /* Build configuration list for PBXNativeTarget "Pods-EbolappTests" */;
+			buildPhases = (
+				A00020F87347E0C11D1FBD45D68B02FE /* Headers */,
+				84973B697C802FBB303C1F0BBD1F06EA /* Sources */,
+				2CD26E208B1EE5F8C284F075C3F4823D /* Frameworks */,
+				B979EE5BB68EEF0359A3BB36275BE3C5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				650B5F64E4267F3F1879CC76F9ADAD99 /* PBXTargetDependency */,
+			);
+			name = "Pods-EbolappTests";
+			productName = "Pods-EbolappTests";
+			productReference = D286D5573EF662A6547676B4CD8B9D63 /* Pods_EbolappTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C7E876FB091FC19E1C02A54EFADE2294 /* Pods-Ebolapp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B2BF1A26A55F5952E1F6829956E66FB /* Build configuration list for PBXNativeTarget "Pods-Ebolapp" */;
+			buildPhases = (
+				677274841CB8094BD364DDC9BEF36202 /* Headers */,
+				440FE7892D4D6D03E62A5EBDBBF853AC /* Sources */,
+				FA0F6097EEF82C0C9AC6BC5E5C627F1B /* Frameworks */,
+				C1B1A09C7BABA3E6CCF00A1B62520172 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5AB2A40BA24D9419349ECA6129AFAC51 /* PBXTargetDependency */,
+				52FDEE0CC75AE52B0D248C34DE1B29FD /* PBXTargetDependency */,
+				B4C4105F0B2A007A302FD36DBDFE062B /* PBXTargetDependency */,
+				9DEF3798C58F6BA9A32187B95D80BAC7 /* PBXTargetDependency */,
+				6C19048464F653F3BC59AA962F9DFFED /* PBXTargetDependency */,
+				28ED340FE3B55AE136AB3C76387F18C5 /* PBXTargetDependency */,
+			);
+			name = "Pods-Ebolapp";
+			productName = "Pods-Ebolapp";
+			productReference = 93D44F83A99972CFFA58BB2D93E16F89 /* Pods_Ebolapp.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		EF83DBE08148B07A31927A343DCA02A7 /* Pods-EbolappWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 31BF7DAABD9DE01ACD493A23A26615A5 /* Build configuration list for PBXNativeTarget "Pods-EbolappWidgetExtension" */;
+			buildPhases = (
+				76E320E1892CA5B9750226C97C1ED158 /* Headers */,
+				F889CBAF0251CD8FD4232850089BA173 /* Sources */,
+				ED05BFC9AE25EDB1AE0CAF3C4C07E32A /* Frameworks */,
+				64B3CC34E95D91B37B7A318556871978 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DA2C3BAD74EA7DBE48FF393374B2684A /* PBXTargetDependency */,
+			);
+			name = "Pods-EbolappWidgetExtension";
+			productName = "Pods-EbolappWidgetExtension";
+			productReference = 0CF24DE6F9104C375C1C69BB391E2989 /* Pods_EbolappWidgetExtension.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FCD9915FE83842AE0201096155515772 /* AppCenter-AppCenterDistributeResources */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FDF7D780D49352612E17C90DA4C8ADA7 /* Build configuration list for PBXNativeTarget "AppCenter-AppCenterDistributeResources" */;
+			buildPhases = (
+				A8AD26E79887CB989387F88EB19C9D97 /* Sources */,
+				D08E9402FA23DE527E8F3FAE6E4AD692 /* Frameworks */,
+				0CC17E2330EF91C5A9B436BAFC1F0FC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AppCenter-AppCenterDistributeResources";
+			productName = "AppCenter-AppCenterDistributeResources";
+			productReference = 11AF731E4071DCD5E34B4CA294302B92 /* AppCenterDistributeResources.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 11.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = A6459EEAF75A01900BEE7522939EA1F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A3282A5B2437E609EEB85861D7ECE717 /* AppCenter */,
+				FCD9915FE83842AE0201096155515772 /* AppCenter-AppCenterDistributeResources */,
+				B08332B0C91F6CDC405644DADDB96E3C /* LicensePlist */,
+				C7E876FB091FC19E1C02A54EFADE2294 /* Pods-Ebolapp */,
+				BBA8790273D5C3E20AEDF44F5B3B9D2A /* Pods-EbolappTests */,
+				5C0EAB91D1E173413CE12C9F4181EC12 /* Pods-EbolappUITests */,
+				EF83DBE08148B07A31927A343DCA02A7 /* Pods-EbolappWidgetExtension */,
+				0B00B2C167CD783351BD1D00BD5AD1F8 /* ReachabilitySwift */,
+				1E798429DCFA7906F6625CCFC1088744 /* SwiftGen */,
+				52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */,
+				A0CA3B0841360687C00D0E48D3E4C1B9 /* UIColor_Hex_Swift */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0CC17E2330EF91C5A9B436BAFC1F0FC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F217D313788F3DC28562D74F4C934CC9 /* cs.lproj in Resources */,
+				06F534E1BF8B1B087718D1115AD94C37 /* de.lproj in Resources */,
+				51C3C90455D42788941EE0FA6BD566DF /* en.lproj in Resources */,
+				C0AF509F0D13EB23CCACF6EE034B044A /* es.lproj in Resources */,
+				40C1C9DA08B2051865FB485E1836AD14 /* fr.lproj in Resources */,
+				0E5890DCBC7A906CD1B8CC725B1E9FB8 /* it.lproj in Resources */,
+				30AA8AF720FDED73D60783CFE6387271 /* ja.lproj in Resources */,
+				4E409D6C7574D8B2EB71DF2D2A6E7183 /* ko.lproj in Resources */,
+				2D0DE4B2E54081310A744FDBFCA94185 /* pl.lproj in Resources */,
+				DEF2B1AC936131940C7551C7B3B9F61A /* pt.lproj in Resources */,
+				3E1EE84617390DDED49D62A1E3E1F5C7 /* ru.lproj in Resources */,
+				26052C6B9AB2FE49BA9884A807CE12B4 /* tr.lproj in Resources */,
+				C8A6780559AFAE1B2D0C9156DA072F22 /* zh-Hans.lproj in Resources */,
+				D243A4A416932B769DCCBD166B8CC946 /* zh-Hant.lproj in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64B3CC34E95D91B37B7A318556871978 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E5519FF8D9D604FA736EAFEA3D5E82B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9078A378BF2E5003CFD1D2273E1138EA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B979EE5BB68EEF0359A3BB36275BE3C5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C1B1A09C7BABA3E6CCF00A1B62520172 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE29E6A1AB47E1CD6B2D3F7D8A0EC2AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		440FE7892D4D6D03E62A5EBDBBF853AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA4FEE0BFCEA9A3A6B8258B236325F20 /* Pods-Ebolapp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		47E9B78346D541D518E2DFB4791D94F6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8028D105201D357C1FBACC99FD9A93D0 /* Reachability.swift in Sources */,
+				A31A53C6DABD2AB23C49E0F22C2390F8 /* ReachabilitySwift-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A1A109BB1A71E8E6620C9E5577782EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A774FD5C234EB7B156D754CE876AC328 /* Pods-EbolappUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84973B697C802FBB303C1F0BBD1F06EA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92856D3545BF9B701E091458CCC12EA9 /* Pods-EbolappTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9189BAAE78390B6142A70609FA7150D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				953C8E04B82408264197C920C4529AE7 /* StringExtension.swift in Sources */,
+				16F6D9BDF5200717700290962CD907F7 /* UIColor_Hex_Swift-dummy.m in Sources */,
+				926428BEC124CE7F68F17C0C42110BDF /* UIColorExtension.swift in Sources */,
+				1FC5245CDDFC64C23D4AFFF272424BE8 /* UIColorInputError.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8AD26E79887CB989387F88EB19C9D97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F889CBAF0251CD8FD4232850089BA173 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02FC5C7A0C7741BA704AF4993E6E5CAB /* Pods-EbolappWidgetExtension-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		28ED340FE3B55AE136AB3C76387F18C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UIColor_Hex_Swift;
+			target = A0CA3B0841360687C00D0E48D3E4C1B9 /* UIColor_Hex_Swift */;
+			targetProxy = F7F21D44341DBD07E0E3D06196F84797 /* PBXContainerItemProxy */;
+		};
+		40D6DA01D43BEC0A39EFF3262D20A8EF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AppCenter-AppCenterDistributeResources";
+			target = FCD9915FE83842AE0201096155515772 /* AppCenter-AppCenterDistributeResources */;
+			targetProxy = 56D6BFB7F4D178C634FE1B238577B1CB /* PBXContainerItemProxy */;
+		};
+		52FDEE0CC75AE52B0D248C34DE1B29FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LicensePlist;
+			target = B08332B0C91F6CDC405644DADDB96E3C /* LicensePlist */;
+			targetProxy = 638395683B955342A4E0C59451C6CBE4 /* PBXContainerItemProxy */;
+		};
+		5AB2A40BA24D9419349ECA6129AFAC51 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AppCenter;
+			target = A3282A5B2437E609EEB85861D7ECE717 /* AppCenter */;
+			targetProxy = C4A3A2DC6B985FD009176E1C54CBC75E /* PBXContainerItemProxy */;
+		};
+		650B5F64E4267F3F1879CC76F9ADAD99 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-Ebolapp";
+			target = C7E876FB091FC19E1C02A54EFADE2294 /* Pods-Ebolapp */;
+			targetProxy = 28FA3A737F4244A2070151744122FF29 /* PBXContainerItemProxy */;
+		};
+		6C19048464F653F3BC59AA962F9DFFED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftLint;
+			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
+			targetProxy = C947278A4C9D8EDE997DED6805E67C63 /* PBXContainerItemProxy */;
+		};
+		9DEF3798C58F6BA9A32187B95D80BAC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftGen;
+			target = 1E798429DCFA7906F6625CCFC1088744 /* SwiftGen */;
+			targetProxy = A47E50D03D17C6F2D794F874BFADA543 /* PBXContainerItemProxy */;
+		};
+		B4C4105F0B2A007A302FD36DBDFE062B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ReachabilitySwift;
+			target = 0B00B2C167CD783351BD1D00BD5AD1F8 /* ReachabilitySwift */;
+			targetProxy = 8051BE884DD7B53E3AD4E8BCF58CFAEF /* PBXContainerItemProxy */;
+		};
+		DA2C3BAD74EA7DBE48FF393374B2684A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = UIColor_Hex_Swift;
+			target = A0CA3B0841360687C00D0E48D3E4C1B9 /* UIColor_Hex_Swift */;
+			targetProxy = EFA6D59B672F4DF82A18C616B1631994 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		05AB3840DC9E5F9556D2EC23F00F8201 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F098452B8CC86030B3CD86B00304ADB8 /* SwiftGen.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AppStore;
+		};
+		08B46B2DCD4CF8BC86D37804C1839841 /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7C46334C0B18CA7E34F0624F648A5B6 /* Pods-EbolappTests.enterprise.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EbolappTests/Pods-EbolappTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EbolappTests/Pods-EbolappTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Enterprise;
+		};
+		0A2095050541EBB5BBDF9965078D086F /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F098452B8CC86030B3CD86B00304ADB8 /* SwiftGen.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Enterprise;
+		};
+		0DE212799D2F3526007F78F5B504BD7D /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C05AA10E334A6CD1520CA275CD6B814 /* AppCenter.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AppCenter";
+				IBSC_MODULE = AppCenter;
+				INFOPLIST_FILE = "Target Support Files/AppCenter/ResourceBundle-AppCenterDistributeResources-AppCenter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = AppCenterDistributeResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = AdHoc;
+		};
+		0E5D58DBBC386D171D5E1022EE254DCC /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F0C5C0F08D73D44694A76FE26FDE740 /* SwiftLint.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AdHoc;
+		};
+		13AA874B48C8C61B25DF26EAE0DD9A4E /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97FD3E47D29BED5656EE4D3A61E40EB8 /* ReachabilitySwift.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ReachabilitySwift/ReachabilitySwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ReachabilitySwift/ReachabilitySwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ReachabilitySwift/ReachabilitySwift.modulemap";
+				PRODUCT_MODULE_NAME = Reachability;
+				PRODUCT_NAME = Reachability;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = AppStore;
+		};
+		257497152829C177993B5EC99C1D227A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		2775ABB2B64531A0952E763F67FB74BB /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C05AA10E334A6CD1520CA275CD6B814 /* AppCenter.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AppCenter";
+				IBSC_MODULE = AppCenter;
+				INFOPLIST_FILE = "Target Support Files/AppCenter/ResourceBundle-AppCenterDistributeResources-AppCenter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = AppCenterDistributeResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = AppStore;
+		};
+		288DFEEE38E3BDE5E825B7BD63EC0F18 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2C9AD32DB17C404E8023B697782CC3FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AppCenter";
+				IBSC_MODULE = AppCenter;
+				INFOPLIST_FILE = "Target Support Files/AppCenter/ResourceBundle-AppCenterDistributeResources-AppCenter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = AppCenterDistributeResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		310A4621BBD58B5D7CECE1FAA7935DAA /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A4C702F7B147D821E6E65E9452D3583 /* LicensePlist.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AppStore;
+		};
+		37956F7D859A2BD342D9C1F22ADB7C3C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1888FAF3177EB343E4D1A59419EA10CB /* AppCenter.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AppCenter";
+				IBSC_MODULE = AppCenter;
+				INFOPLIST_FILE = "Target Support Files/AppCenter/ResourceBundle-AppCenterDistributeResources-AppCenter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = AppCenterDistributeResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		3968F887ECE132881E68BCA3F40793D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ReachabilitySwift/ReachabilitySwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ReachabilitySwift/ReachabilitySwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ReachabilitySwift/ReachabilitySwift.modulemap";
+				PRODUCT_MODULE_NAME = Reachability;
+				PRODUCT_NAME = Reachability;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		44C47B8F73B319B57816FF70F03C0374 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B4EE5DD2068C5EC0FB5258B7217D4D7 /* Pods-EbolappUITests.appstore.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EbolappUITests/Pods-EbolappUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EbolappUITests/Pods-EbolappUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = AppStore;
+		};
+		454592922D1EDEADCAF37EE21AD6255E /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C05AA10E334A6CD1520CA275CD6B814 /* AppCenter.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AdHoc;
+		};
+		46E8468D2D1658E2AC912CCCD420ED5F /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C05AA10E334A6CD1520CA275CD6B814 /* AppCenter.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AppCenter";
+				IBSC_MODULE = AppCenter;
+				INFOPLIST_FILE = "Target Support Files/AppCenter/ResourceBundle-AppCenterDistributeResources-AppCenter-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = AppCenterDistributeResources;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Enterprise;
+		};
+		47A923DBE613B5D545B10C71987B81C1 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5EEB2148FFAB07B4AD821E2AB45A28A1 /* Pods-EbolappUITests.adhoc.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EbolappUITests/Pods-EbolappUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EbolappUITests/Pods-EbolappUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = AdHoc;
+		};
+		4BE21830B8422C96AE4ADD4750838B0E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAEE9D6B2A4DFA174A0891EA660A67C6 /* ReachabilitySwift.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ReachabilitySwift/ReachabilitySwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ReachabilitySwift/ReachabilitySwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ReachabilitySwift/ReachabilitySwift.modulemap";
+				PRODUCT_MODULE_NAME = Reachability;
+				PRODUCT_NAME = Reachability;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4BE6D236019767E1B783B55191142BCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12979AE88E1742B35C2736D32425DD60 /* Pods-EbolappWidgetExtension.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EbolappWidgetExtension/Pods-EbolappWidgetExtension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EbolappWidgetExtension/Pods-EbolappWidgetExtension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		57E0352873187228EDE406C6B59F4124 /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_ENTERPRISE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Enterprise;
+		};
+		58BCFE5BBDF0BE805C101BAD11E89EE7 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79DC98A1CBC9FEE82D6952B7411B5641 /* Pods-EbolappTests.adhoc.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EbolappTests/Pods-EbolappTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EbolappTests/Pods-EbolappTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = AdHoc;
+		};
+		5E362AC18E20A6106EF5FB4210DAD3CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3539A17EFB61A63E02094F3BC8C0B91 /* SwiftGen.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		612A9C95D29A1FBAF1C08474651B15CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		66B6E7F3677245EA8C15DC8E774E1D82 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DCD7399D744857357F79B93F974E8C2 /* Pods-EbolappWidgetExtension.adhoc.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EbolappWidgetExtension/Pods-EbolappWidgetExtension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EbolappWidgetExtension/Pods-EbolappWidgetExtension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = AdHoc;
+		};
+		7247BE7A2F29645E763C7FF3EA6C43BA /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_APP_STORE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = AppStore;
+		};
+		7CD69E80A7965B17545178AB0B41B1E6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EbolappTests/Pods-EbolappTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EbolappTests/Pods-EbolappTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		841F72BAC111AC9C8085CFBC1258AED5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1888FAF3177EB343E4D1A59419EA10CB /* AppCenter.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8A99FDA6C1795A2A5971062FE8A20AFD /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A4C702F7B147D821E6E65E9452D3583 /* LicensePlist.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Enterprise;
+		};
+		8E8D7429DAB2C19F76CEB5A4C40D723F /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8740EE60965507DE5A09757E92C58590 /* Pods-Ebolapp.appstore.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Ebolapp/Pods-Ebolapp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Ebolapp/Pods-Ebolapp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = AppStore;
+		};
+		920E7413D0EF9162370732D37EC698D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EbolappUITests/Pods-EbolappUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EbolappUITests/Pods-EbolappUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		934921D4987A7F5E91A106D672BA9EA3 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BED7F2B8FBD0E70FA0E0ADC025F09408 /* UIColor_Hex_Swift.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UIColor_Hex_Swift/UIColor_Hex_Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIColor_Hex_Swift/UIColor_Hex_Swift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/UIColor_Hex_Swift/UIColor_Hex_Swift.modulemap";
+				PRODUCT_MODULE_NAME = UIColor_Hex_Swift;
+				PRODUCT_NAME = UIColor_Hex_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = AppStore;
+		};
+		96DB76676F0453F9BE9522FEBCB10FCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UIColor_Hex_Swift/UIColor_Hex_Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIColor_Hex_Swift/UIColor_Hex_Swift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/UIColor_Hex_Swift/UIColor_Hex_Swift.modulemap";
+				PRODUCT_MODULE_NAME = UIColor_Hex_Swift;
+				PRODUCT_NAME = UIColor_Hex_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9B370BA2198E89EEFF4CA21A55C897C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EbolappWidgetExtension/Pods-EbolappWidgetExtension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EbolappWidgetExtension/Pods-EbolappWidgetExtension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9B5A4023B58F1FCB6B8AB757CD1EFC69 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C05AA10E334A6CD1520CA275CD6B814 /* AppCenter.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AppStore;
+		};
+		9BB385D8969E36DCE621B2D732E5CBC5 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78A0EA8B3B37E4DA0F254AEFA4560EC3 /* Pods-EbolappTests.appstore.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EbolappTests/Pods-EbolappTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EbolappTests/Pods-EbolappTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = AppStore;
+		};
+		9F06CA45519CC56FEDDF8EB74C148674 /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1367B0E1CEBF5729E83A17B3DCCAD504 /* Pods-EbolappWidgetExtension.enterprise.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EbolappWidgetExtension/Pods-EbolappWidgetExtension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EbolappWidgetExtension/Pods-EbolappWidgetExtension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Enterprise;
+		};
+		A0DB07DF37D8B6FD283001C7A83224C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A2188C03CC28EF59C5BD7CABA008ACEA /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BED7F2B8FBD0E70FA0E0ADC025F09408 /* UIColor_Hex_Swift.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UIColor_Hex_Swift/UIColor_Hex_Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIColor_Hex_Swift/UIColor_Hex_Swift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/UIColor_Hex_Swift/UIColor_Hex_Swift.modulemap";
+				PRODUCT_MODULE_NAME = UIColor_Hex_Swift;
+				PRODUCT_NAME = UIColor_Hex_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Enterprise;
+		};
+		A402EEF6F22571600DBA74EE01F0D176 /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F0C5C0F08D73D44694A76FE26FDE740 /* SwiftLint.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AppStore;
+		};
+		A89E8B2F7FD7F7DDDB619A6D53626FCD /* AppStore */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 622F46BE29C7E3208B4F7EB797F56B94 /* Pods-EbolappWidgetExtension.appstore.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EbolappWidgetExtension/Pods-EbolappWidgetExtension-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EbolappWidgetExtension/Pods-EbolappWidgetExtension.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = AppStore;
+		};
+		AE01A75A75A3C62C1B92D55939F739B5 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F098452B8CC86030B3CD86B00304ADB8 /* SwiftGen.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AdHoc;
+		};
+		AF29F24B3D0463C650390617445E0556 /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F0C5C0F08D73D44694A76FE26FDE740 /* SwiftLint.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Enterprise;
+		};
+		AF3080A52B69ED0751847A8AE574ABA0 /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB3E3D3717E878E43FB7CD1D2EB8AC1D /* Pods-Ebolapp.enterprise.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Ebolapp/Pods-Ebolapp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Ebolapp/Pods-Ebolapp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Enterprise;
+		};
+		AFBECB0EAE30E99D1E781457C5B16CB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75E226350B42BF9E0D88E7473EDAEB4D /* Pods-Ebolapp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Ebolapp/Pods-Ebolapp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Ebolapp/Pods-Ebolapp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		B4A71DD7A3EED1676D7F093A0A49BB70 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_AD_HOC=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = AdHoc;
+		};
+		B6C678B13E87095753D258CE54D148F5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Ebolapp/Pods-Ebolapp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Ebolapp/Pods-Ebolapp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B8D5F83374C9A25CD6350420A53280F6 /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97FD3E47D29BED5656EE4D3A61E40EB8 /* ReachabilitySwift.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ReachabilitySwift/ReachabilitySwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ReachabilitySwift/ReachabilitySwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ReachabilitySwift/ReachabilitySwift.modulemap";
+				PRODUCT_MODULE_NAME = Reachability;
+				PRODUCT_NAME = Reachability;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Enterprise;
+		};
+		BC1926089D190BFEB81DA1D3A714AFE5 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BED7F2B8FBD0E70FA0E0ADC025F09408 /* UIColor_Hex_Swift.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UIColor_Hex_Swift/UIColor_Hex_Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIColor_Hex_Swift/UIColor_Hex_Swift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/UIColor_Hex_Swift/UIColor_Hex_Swift.modulemap";
+				PRODUCT_MODULE_NAME = UIColor_Hex_Swift;
+				PRODUCT_NAME = UIColor_Hex_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = AdHoc;
+		};
+		BC7AA0558E6D678CDB8F0D6B47A4F904 /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B37F9749326679C75DA663ED2406CA8 /* Pods-EbolappUITests.enterprise.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EbolappUITests/Pods-EbolappUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EbolappUITests/Pods-EbolappUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Enterprise;
+		};
+		BE5B2FA9CAE6BE19878FE85CC3D5452D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3A84BBC422A87ACFE1E69143E24DE91 /* UIColor_Hex_Swift.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UIColor_Hex_Swift/UIColor_Hex_Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIColor_Hex_Swift/UIColor_Hex_Swift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/UIColor_Hex_Swift/UIColor_Hex_Swift.modulemap";
+				PRODUCT_MODULE_NAME = UIColor_Hex_Swift;
+				PRODUCT_NAME = UIColor_Hex_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BF51739125F4F60B6A214225EDA0F454 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41AD0FA8A54EBE0822B159032E4C2515 /* LicensePlist.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D76146C02396E317A4CA5EACE29DBE5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 033F2E752FA756357758249FD8544A45 /* Pods-EbolappTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EbolappTests/Pods-EbolappTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EbolappTests/Pods-EbolappTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DA1F845CC459EAADC3115B1B30B6F16E /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A4C702F7B147D821E6E65E9452D3583 /* LicensePlist.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AdHoc;
+		};
+		DD8F832993327D1DD8046C3CBCBD97CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		DE4DBF88F7476F6DF7F2B3B991E76EEB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DFE419CE1140AEAD5E9671071CBBD059 /* Enterprise */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C05AA10E334A6CD1520CA275CD6B814 /* AppCenter.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Enterprise;
+		};
+		E2CBDD7A61317C3F34BF5EBE306A8224 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 141307425E769E9B833BD74EC9D0F7B2 /* Pods-Ebolapp.adhoc.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Ebolapp/Pods-Ebolapp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Ebolapp/Pods-Ebolapp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = AdHoc;
+		};
+		EC908FC0991E1023E50DB0651C55B25B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F655655DF2DD5586E468CF671C9F4CC /* SwiftLint.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EDF83A7C837406CDCB378664A535C753 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97FD3E47D29BED5656EE4D3A61E40EB8 /* ReachabilitySwift.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ReachabilitySwift/ReachabilitySwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ReachabilitySwift/ReachabilitySwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ReachabilitySwift/ReachabilitySwift.modulemap";
+				PRODUCT_MODULE_NAME = Reachability;
+				PRODUCT_NAME = Reachability;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = AdHoc;
+		};
+		F12852D1F82A73645B179EA30A647CE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C99A072B49EBA90D19868E117C2E6ADD /* Pods-EbolappUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-EbolappUITests/Pods-EbolappUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-EbolappUITests/Pods-EbolappUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		036ED74044D519437C4F48D5D8228A28 /* Build configuration list for PBXNativeTarget "ReachabilitySwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDF83A7C837406CDCB378664A535C753 /* AdHoc */,
+				13AA874B48C8C61B25DF26EAE0DD9A4E /* AppStore */,
+				4BE21830B8422C96AE4ADD4750838B0E /* Debug */,
+				B8D5F83374C9A25CD6350420A53280F6 /* Enterprise */,
+				3968F887ECE132881E68BCA3F40793D6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D9AF1744A442A51CB79DA2FCDF9104A /* Build configuration list for PBXAggregateTarget "LicensePlist" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA1F845CC459EAADC3115B1B30B6F16E /* AdHoc */,
+				310A4621BBD58B5D7CECE1FAA7935DAA /* AppStore */,
+				BF51739125F4F60B6A214225EDA0F454 /* Debug */,
+				8A99FDA6C1795A2A5971062FE8A20AFD /* Enterprise */,
+				DE4DBF88F7476F6DF7F2B3B991E76EEB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		31BF7DAABD9DE01ACD493A23A26615A5 /* Build configuration list for PBXNativeTarget "Pods-EbolappWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66B6E7F3677245EA8C15DC8E774E1D82 /* AdHoc */,
+				A89E8B2F7FD7F7DDDB619A6D53626FCD /* AppStore */,
+				4BE6D236019767E1B783B55191142BCD /* Debug */,
+				9F06CA45519CC56FEDDF8EB74C148674 /* Enterprise */,
+				9B370BA2198E89EEFF4CA21A55C897C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BF1D49C02E99EC22963827A744F4D4C /* Build configuration list for PBXAggregateTarget "SwiftGen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE01A75A75A3C62C1B92D55939F739B5 /* AdHoc */,
+				05AB3840DC9E5F9556D2EC23F00F8201 /* AppStore */,
+				5E362AC18E20A6106EF5FB4210DAD3CE /* Debug */,
+				0A2095050541EBB5BBDF9965078D086F /* Enterprise */,
+				A0DB07DF37D8B6FD283001C7A83224C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B4A71DD7A3EED1676D7F093A0A49BB70 /* AdHoc */,
+				7247BE7A2F29645E763C7FF3EA6C43BA /* AppStore */,
+				DD8F832993327D1DD8046C3CBCBD97CD /* Debug */,
+				57E0352873187228EDE406C6B59F4124 /* Enterprise */,
+				257497152829C177993B5EC99C1D227A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E3518BA491D6D608E62E83F7BF5A313 /* Build configuration list for PBXNativeTarget "Pods-EbolappTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58BCFE5BBDF0BE805C101BAD11E89EE7 /* AdHoc */,
+				9BB385D8969E36DCE621B2D732E5CBC5 /* AppStore */,
+				D76146C02396E317A4CA5EACE29DBE5B /* Debug */,
+				08B46B2DCD4CF8BC86D37804C1839841 /* Enterprise */,
+				7CD69E80A7965B17545178AB0B41B1E6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		848C5805741493CC1497D2B905E4A1C0 /* Build configuration list for PBXAggregateTarget "SwiftLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E5D58DBBC386D171D5E1022EE254DCC /* AdHoc */,
+				A402EEF6F22571600DBA74EE01F0D176 /* AppStore */,
+				EC908FC0991E1023E50DB0651C55B25B /* Debug */,
+				AF29F24B3D0463C650390617445E0556 /* Enterprise */,
+				288DFEEE38E3BDE5E825B7BD63EC0F18 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B2BF1A26A55F5952E1F6829956E66FB /* Build configuration list for PBXNativeTarget "Pods-Ebolapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E2CBDD7A61317C3F34BF5EBE306A8224 /* AdHoc */,
+				8E8D7429DAB2C19F76CEB5A4C40D723F /* AppStore */,
+				AFBECB0EAE30E99D1E781457C5B16CB6 /* Debug */,
+				AF3080A52B69ED0751847A8AE574ABA0 /* Enterprise */,
+				B6C678B13E87095753D258CE54D148F5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A7D0029EC46BACC7BE5426107557B485 /* Build configuration list for PBXNativeTarget "UIColor_Hex_Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC1926089D190BFEB81DA1D3A714AFE5 /* AdHoc */,
+				934921D4987A7F5E91A106D672BA9EA3 /* AppStore */,
+				BE5B2FA9CAE6BE19878FE85CC3D5452D /* Debug */,
+				A2188C03CC28EF59C5BD7CABA008ACEA /* Enterprise */,
+				96DB76676F0453F9BE9522FEBCB10FCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D1F732ECA360F5ECA0D3D7F2331AB1D7 /* Build configuration list for PBXAggregateTarget "AppCenter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				454592922D1EDEADCAF37EE21AD6255E /* AdHoc */,
+				9B5A4023B58F1FCB6B8AB757CD1EFC69 /* AppStore */,
+				841F72BAC111AC9C8085CFBC1258AED5 /* Debug */,
+				DFE419CE1140AEAD5E9671071CBBD059 /* Enterprise */,
+				612A9C95D29A1FBAF1C08474651B15CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D44EF12EC46C0583B519F0300DF018F7 /* Build configuration list for PBXNativeTarget "Pods-EbolappUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47A923DBE613B5D545B10C71987B81C1 /* AdHoc */,
+				44C47B8F73B319B57816FF70F03C0374 /* AppStore */,
+				F12852D1F82A73645B179EA30A647CE7 /* Debug */,
+				BC7AA0558E6D678CDB8F0D6B47A4F904 /* Enterprise */,
+				920E7413D0EF9162370732D37EC698D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FDF7D780D49352612E17C90DA4C8ADA7 /* Build configuration list for PBXNativeTarget "AppCenter-AppCenterDistributeResources" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DE212799D2F3526007F78F5B504BD7D /* AdHoc */,
+				2775ABB2B64531A0952E763F67FB74BB /* AppStore */,
+				37956F7D859A2BD342D9C1F22ADB7C3C /* Debug */,
+				46E8468D2D1658E2AC912CCCD420ED5F /* Enterprise */,
+				2C9AD32DB17C404E8023B697782CC3FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

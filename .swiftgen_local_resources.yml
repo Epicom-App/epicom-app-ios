@@ -1,0 +1,22 @@
+input_dir: Ebolapp/Resources
+output_dir: Ebolapp/Generated/SwiftGen
+
+fonts:
+  inputs: Fonts
+  outputs:
+    templateName: swift4
+    output: Fonts.swift
+
+ib:
+  inputs: Storyboards
+  outputs:
+    - templateName: scenes-swift4
+      output: Scenes.swift
+    - templateName: segues-swift4
+      output: Segues.swift
+
+xcassets:
+  inputs: Assets.xcassets
+  outputs:
+    templateName: swift4
+    output: Assets.swift

@@ -1,0 +1,35 @@
+name: AppCenter, nameSpecified: 
+body: Visual Studio App Ce…
+version: 3.3.3
+
+name: LicensePlist, nameSpecified: 
+body: MIT License
+
+Copyrig…
+version: 3.0.5
+
+name: ReachabilitySwift, nameSpecified: 
+body: Copyright (c) 2016 A…
+version: 5.0.0
+
+name: SwiftGen, nameSpecified: 
+body: MIT Licence
+
+Copyrig…
+version: 6.3.0
+
+name: SwiftLint, nameSpecified: 
+body: The MIT License (MIT…
+version: 0.40.1
+
+name: UIColor_Hex_Swift, nameSpecified: 
+body: The MIT License (MIT…
+version: 5.1.0
+
+name: UIColor_Hex_Swift, nameSpecified: 
+body: The MIT License (MIT…
+version: 5.1.0
+
+add-version-numbers: false
+
+LicensePlist Version: 3.0.5

@@ -1,0 +1,22 @@
+
+steps:
+
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFormat: 'JUnit'
+      testResultsFiles: 'sonar_reports/unittest.junit'
+      testRunTitle: 'Unit Tests'
+      failTaskOnFailedTests: true
+
+  - task: PublishTestResults@2
+    inputs:
+      testResultsFormat: 'JUnit'
+      testResultsFiles: 'sonar_reports/uitest.junit'
+      testRunTitle: 'UI Tests'
+      failTaskOnFailedTests: false
+
+  - task: PublishCodeCoverageResults@1
+    inputs:
+      codeCoverageTool: 'Cobertura'
+      summaryFileLocation: 'sonar_reports/cobertura.xml'
+      failIfCoverageEmpty: false

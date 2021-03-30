@@ -1,0 +1,6 @@
+framework module Pods_EbolappTests {
+  umbrella header "Pods-EbolappTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

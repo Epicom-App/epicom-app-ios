@@ -1,0 +1,56 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)
+// swift-module-flags: -target i386-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AFLoggerModule
+import Foundation
+import MessageUI
+import Swift
+import UIKit
+@objc @_inheritsConvenienceInitializers public class AFLogger : AFLoggerModule.AFLog {
+  public static var shared: AFLoggerModule.AFLogger
+  public typealias ResetBlock = () -> Swift.Void
+  public var longPressDuration: Swift.Double
+  public var mailRecipients: [Swift.String]?
+  public var sendMailOnly: Swift.Bool
+  public var disableOnscreenLogfiles: Swift.Bool
+  public func activate(withOnscreenOutput enabled: Swift.Bool)
+  public func addAlertAction(_ alertAction: UIKit.UIAlertAction)
+  public func additionalResetActions(_ resetBlock: @escaping AFLoggerModule.AFLogger.ResetBlock)
+  public func getCrashLog(withBytes maxSize: Swift.Int) -> Swift.String!
+  public func openAlertViewManually()
+  public func currentLogData() -> Foundation.Data?
+  public func prevLogData() -> Foundation.Data?
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension AFLogger : MessageUI.MFMailComposeViewControllerDelegate {
+  @objc dynamic public func mailComposeController(_ controller: MessageUI.MFMailComposeViewController, didFinishWith result: MessageUI.MFMailComposeResult, error: Swift.Error?)
+}
+extension UIDevice {
+  public static let modelName: Swift.String
+}
+public enum AFLogLevel : Swift.Int {
+  case verbose
+  case debug
+  case info
+  case warning
+  case error
+  public typealias RawValue = Swift.Int
+  public init?(rawValue: Swift.Int)
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class AFLog : ObjectiveC.NSObject {
+  public var logLevel: AFLoggerModule.AFLogLevel
+  public var isUiLoggingEnabled: Swift.Bool
+  public func V(_ items: Any? = nil, functionName: Swift.String = #function, fileName: Swift.String = #file, line: Swift.Int = #line)
+  public func D(_ items: Any? = nil, functionName: Swift.String = #function, fileName: Swift.String = #file, line: Swift.Int = #line)
+  public func I(_ items: Any? = nil, functionName: Swift.String = #function, fileName: Swift.String = #file, line: Swift.Int = #line)
+  public func W(_ items: Any? = nil, functionName: Swift.String = #function, fileName: Swift.String = #file, line: Swift.Int = #line)
+  public func E(_ items: Any? = nil, functionName: Swift.String = #function, fileName: Swift.String = #file, line: Swift.Int = #line)
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension AFLoggerModule.AFLogLevel : Swift.Equatable {}
+extension AFLoggerModule.AFLogLevel : Swift.Hashable {}
+extension AFLoggerModule.AFLogLevel : Swift.RawRepresentable {}
