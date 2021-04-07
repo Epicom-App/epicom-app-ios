@@ -6,9 +6,9 @@
 #import <Foundation/NSString.h>
 #import <Foundation/NSValue.h>
 
-@class CommonCodeRiskMatchTableAdapter, CommonCodeDatabaseDriverFactory, CommonCodeMapRegionCaseCacheTable, CommonCodeMapRegionCaseLegendTable, CommonCodeMapRegionCaseTable, CommonCodeMapRegionGeoRingTable, CommonCodeMapRegionTable, CommonCodeMapStatesCaseTable, CommonCodeRiskMatchNotificationTable, CommonCodeVisit, CommonCodeRiskMatchTable, CommonCodeStaticPagesCacheTable, CommonCodeUserLocationTable, CommonCodeVisitTable, CommonCodeRuntimeQuery<__covariant RowType>, CommonCodeDateUtilsDayInterval, CommonCodeMapRegionBox, CommonCodePosition, CommonCodeDatabaseWrapper, CommonCodeStaticPages, CommonCodeKotlinUnit, CommonCodeEndpoints, CommonCodeAnalyseRiskMatchUseCaseImpl, CommonCodeCreateRiskMatchNotificationUseCaseImpl, CommonCodeRiskMatch, CommonCodeRiskMatchType, CommonCodeNotNotifiedRiskMatch, CommonCodeMapRegionInfo, CommonCodeKotlinEnum<E>, CommonCodeDistrictRegion, CommonCodeStateRegion, CommonCodeMapRegion, CommonCodeMapRegionWithGeometry, CommonCodeKotlinThrowable, CommonCodeUserLocation, CommonCodeMapRegionCase, CommonCodeMapRegionCaseCacheKey, CommonCodeMapRegionLegendItem, CommonCodeMapRegionLegend, CommonCodeMapStateCase, CommonCodeKotlinPair<__covariant A, __covariant B>, CommonCodeNextStepItem, CommonCodeNextStepGroup, CommonCodeNextStepType, CommonCodeNextStepSection, CommonCodeKtor_client_coreHttpClient, CommonCodeNetworkApiParameterNames, CommonCodeNetworkApiParameter, CommonCodeLanguage, CommonCodeKotlinArray<T>, CommonCodeRuntimeTransacterTransaction, CommonCodeKotlinException, CommonCodeKotlinRuntimeException, CommonCodeKotlinIllegalStateException, CommonCodeKotlinx_coroutines_coreCancellationException, CommonCodeKtor_client_coreHttpClientEngineConfig, CommonCodeKtor_client_coreHttpClientConfig<T>, CommonCodeKtor_client_coreHttpRequestBuilder, CommonCodeKtor_client_coreHttpClientCall, CommonCodeKotlinx_coroutines_coreCoroutineDispatcher, CommonCodeKtor_client_coreHttpReceivePipeline, CommonCodeKtor_client_coreHttpRequestPipeline, CommonCodeKtor_client_coreHttpResponsePipeline, CommonCodeKtor_client_coreHttpSendPipeline, CommonCodeKotlinByteArray, CommonCodeKotlinx_serialization_coreSerializersModule, CommonCodeKotlinx_serialization_coreSerialKind, CommonCodeKotlinNothing, CommonCodeKtor_client_coreHttpRequestData, CommonCodeKtor_client_coreHttpResponseData, CommonCodeKtor_client_coreProxyConfig, CommonCodeKtor_httpHeadersBuilder, CommonCodeKtor_httpURLBuilder, CommonCodeKtor_httpHttpMethod, CommonCodeKtor_client_coreTypeInfo, CommonCodeKtor_client_coreHttpResponse, CommonCodeKtor_utilsAttributeKey<T>, CommonCodeKotlinAbstractCoroutineContextElement, CommonCodeKtor_utilsPipelinePhase, CommonCodeKtor_utilsPipeline<TSubject, TContext>, CommonCodeKtor_client_coreHttpResponseContainer, CommonCodeKotlinByteIterator, CommonCodeKotlinx_coroutines_coreAtomicDesc, CommonCodeKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp, CommonCodeKtor_httpUrl, CommonCodeKtor_httpOutgoingContent, CommonCodeKtor_httpHttpStatusCode, CommonCodeKtor_utilsGMTDate, CommonCodeKtor_httpHttpProtocolVersion, CommonCodeKtor_utilsStringValuesBuilder, CommonCodeKtor_httpURLProtocol, CommonCodeKtor_httpParametersBuilder, CommonCodeKtor_ioMemory, CommonCodeKtor_ioIoBuffer, CommonCodeKtor_ioByteReadPacket, CommonCodeKtor_ioByteOrder, CommonCodeKotlinx_coroutines_coreAtomicOp<__contravariant T>, CommonCodeKotlinx_coroutines_coreOpDescriptor, CommonCodeKotlinx_coroutines_coreLockFreeLinkedListNode, CommonCodeKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc, CommonCodeKtor_httpContentType, CommonCodeKtor_utilsWeekDay, CommonCodeKtor_utilsMonth, CommonCodeKtor_ioBuffer, CommonCodeKtor_ioChunkBuffer, CommonCodeKotlinCharArray, CommonCodeKtor_ioAbstractInput, CommonCodeKtor_ioByteReadPacketBase, CommonCodeKtor_ioByteReadPacketPlatformBase, CommonCodeKotlinKTypeProjection, CommonCodeKotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc<T>, CommonCodeKotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFirstDesc<T>, CommonCodeKtor_httpHeaderValueParam, CommonCodeKtor_httpHeaderValueWithParameters, CommonCodeKotlinCharIterator, CommonCodeKotlinKVariance;
+@class CommonCodeRiskMatchTableAdapter, CommonCodeDatabaseDriverFactory, CommonCodeMapRegionCaseCacheTable, CommonCodeMapRegionCaseLegendTable, CommonCodeMapRegionCaseTable, CommonCodeMapRegionGeoRingTable, CommonCodeMapRegionTable, CommonCodeMapStatesCaseTable, CommonCodeRiskMatchNotificationTable, CommonCodeVisit, CommonCodeRiskMatchTable, CommonCodeStaticPagesCacheTable, CommonCodeUserLocationTable, CommonCodeVisitTable, CommonCodeRuntimeQuery<__covariant RowType>, CommonCodeDateUtilsTZone, CommonCodeDateUtilsDayInterval, CommonCodeKotlinEnum<E>, CommonCodeKotlinArray<T>, CommonCodeMapRegionBox, CommonCodePosition, CommonCodeDatabaseWrapper, CommonCodeStaticPages, CommonCodeKotlinUnit, CommonCodeEndpoints, CommonCodeAnalyseRiskMatchUseCaseImpl, CommonCodeCreateRiskMatchNotificationUseCaseImpl, CommonCodeRiskMatch, CommonCodeRiskMatchType, CommonCodeNotNotifiedRiskMatch, CommonCodeMapRegionInfo, CommonCodeDistrictRegion, CommonCodeStateRegion, CommonCodeMapRegion, CommonCodeMapRegionWithGeometry, CommonCodeKotlinThrowable, CommonCodeUserLocation, CommonCodeMapRegionCase, CommonCodeMapRegionCaseCacheKey, CommonCodeMapRegionLegendItem, CommonCodeMapRegionLegend, CommonCodeMapStateCase, CommonCodeKotlinPair<__covariant A, __covariant B>, CommonCodeKtor_client_coreHttpClient, CommonCodeNetworkApiParameterNames, CommonCodeNetworkApiParameter, CommonCodeLanguage, CommonCodeRuntimeTransacterTransaction, CommonCodeKotlinException, CommonCodeKotlinRuntimeException, CommonCodeKotlinIllegalStateException, CommonCodeKotlinx_coroutines_coreCancellationException, CommonCodeKtor_client_coreHttpClientEngineConfig, CommonCodeKtor_client_coreHttpClientConfig<T>, CommonCodeKtor_client_coreHttpRequestBuilder, CommonCodeKtor_client_coreHttpClientCall, CommonCodeKotlinx_coroutines_coreCoroutineDispatcher, CommonCodeKtor_client_coreHttpReceivePipeline, CommonCodeKtor_client_coreHttpRequestPipeline, CommonCodeKtor_client_coreHttpResponsePipeline, CommonCodeKtor_client_coreHttpSendPipeline, CommonCodeKotlinByteArray, CommonCodeKotlinx_serialization_coreSerializersModule, CommonCodeKotlinx_serialization_coreSerialKind, CommonCodeKotlinNothing, CommonCodeKtor_client_coreHttpRequestData, CommonCodeKtor_client_coreHttpResponseData, CommonCodeKtor_client_coreProxyConfig, CommonCodeKtor_httpHeadersBuilder, CommonCodeKtor_httpURLBuilder, CommonCodeKtor_httpHttpMethod, CommonCodeKtor_client_coreTypeInfo, CommonCodeKtor_client_coreHttpResponse, CommonCodeKtor_utilsAttributeKey<T>, CommonCodeKotlinAbstractCoroutineContextElement, CommonCodeKtor_utilsPipelinePhase, CommonCodeKtor_utilsPipeline<TSubject, TContext>, CommonCodeKtor_client_coreHttpResponseContainer, CommonCodeKotlinByteIterator, CommonCodeKotlinx_coroutines_coreAtomicDesc, CommonCodeKotlinx_coroutines_coreLockFreeLinkedListNodePrepareOp, CommonCodeKtor_httpUrl, CommonCodeKtor_httpOutgoingContent, CommonCodeKtor_httpHttpStatusCode, CommonCodeKtor_utilsGMTDate, CommonCodeKtor_httpHttpProtocolVersion, CommonCodeKtor_utilsStringValuesBuilder, CommonCodeKtor_httpURLProtocol, CommonCodeKtor_httpParametersBuilder, CommonCodeKtor_ioMemory, CommonCodeKtor_ioIoBuffer, CommonCodeKtor_ioByteReadPacket, CommonCodeKtor_ioByteOrder, CommonCodeKotlinx_coroutines_coreAtomicOp<__contravariant T>, CommonCodeKotlinx_coroutines_coreOpDescriptor, CommonCodeKotlinx_coroutines_coreLockFreeLinkedListNode, CommonCodeKotlinx_coroutines_coreLockFreeLinkedListNodeAbstractAtomicDesc, CommonCodeKtor_httpContentType, CommonCodeKtor_utilsWeekDay, CommonCodeKtor_utilsMonth, CommonCodeKtor_ioBuffer, CommonCodeKtor_ioChunkBuffer, CommonCodeKotlinCharArray, CommonCodeKtor_ioAbstractInput, CommonCodeKtor_ioByteReadPacketBase, CommonCodeKtor_ioByteReadPacketPlatformBase, CommonCodeKotlinKTypeProjection, CommonCodeKotlinx_coroutines_coreLockFreeLinkedListNodeAddLastDesc<T>, CommonCodeKotlinx_coroutines_coreLockFreeLinkedListNodeRemoveFirstDesc<T>, CommonCodeKtor_httpHeaderValueParam, CommonCodeKtor_httpHeaderValueWithParameters, CommonCodeKotlinCharIterator, CommonCodeKotlinKVariance;
 
-@protocol CommonCodeMapRegionCaseCacheTableQueries, CommonCodeMapRegionCaseLegendTableQueries, CommonCodeMapRegionCaseTableQueries, CommonCodeMapRegionGeoRingTableQueries, CommonCodeMapRegionTableQueries, CommonCodeMapStatesCaseTableQueries, CommonCodeRiskMatchNotificationTableQueries, CommonCodeRiskMatchTableQueries, CommonCodeStaticPagesCacheTableQueries, CommonCodeUserLocationTableQueries, CommonCodeVisitTableQueries, CommonCodeRuntimeTransactionWithoutReturn, CommonCodeRuntimeTransactionWithReturn, CommonCodeRuntimeTransacter, CommonCodeAppDatabase, CommonCodeRuntimeSqlDriver, CommonCodeRuntimeSqlDriverSchema, CommonCodeRuntimeColumnAdapter, CommonCodeGetStaticPageUseCase, CommonCodeNetworkParametersSendStrategy, CommonCodeStaticPagesNetworkApi, CommonCodeStaticPagesDbApi, CommonCodeCleanRiskMatchesCacheUseCase, CommonCodeGetNotNotifiedRiskMatchesUseCase, CommonCodeGetNotRiskyVisitsForDayUseCase, CommonCodeGetRiskMatchesForDayUseCase, CommonCodeGetRiskMatchesForPeriodUseCase, CommonCodeMarkAsNotifiedRiskMatchesUseCase, CommonCodeObserveNotNotifiedRiskMatchesUseCase, CommonCodeObserveRiskDatesOffsetsFromCurrentDateForPeriod, CommonCodeObserveRiskMatchForPeriodUseCase, CommonCodeObserveRiskMatchesForTodayUseCase, CommonCodePerformRiskMatchingForDayUseCase, CommonCodeKotlinx_coroutines_coreFlow, CommonCodeAnalyseRiskMatchUseCase, CommonCodeRiskMatchDbApi, CommonCodeVisitsDbApi, CommonCodeCreateRiskMatchNotificationUseCase, CommonCodeKotlinx_coroutines_coreJob, CommonCodeGetVisitsBetweenTimestampsUseCase, CommonCodeGetMapRegionIdByPositionUseCase, CommonCodeGetMapRegionInfoUseCase, CommonCodeKotlinComparable, CommonCodeCreateMapRegionsUseCase, CommonCodeJsonFileReader, CommonCodeGetMapRegionsUseCase, CommonCodeGetMapRegionsWithGeometryUseCase, CommonCodeKotlinx_serialization_coreKSerializer, CommonCodeGetLastUserLocationUseCase, CommonCodeGetUserLocationsForDayByTimestampUseCase, CommonCodeGetVisitsForDayUseCase, CommonCodeObserveVisitsUseCase, CommonCodeSaveUserLocationsUseCase, CommonCodeUpdateVisitsUseCase, CommonCodeDebugRecalculateVisitsUseCase, CommonCodeUserLocationsDbApi, CommonCodeGetMapRegionCasesLegendUseCase, CommonCodeGetMapRegionCasesByTimestampUseCase, CommonCodeGetMapStatesCasesByTimestampUseCase, CommonCodeSaveMapRegionsCasesByTimestampSecUseCase, CommonCodeCasesNetworkApi, CommonCodeCasesDbApi, CommonCodeGetMapRegionCasesDbgInfoUseCase, CommonCodeGetMapRegionLegendDbgInfoUseCase, CommonCodeGetMapRegionsDbgInfoUseCase, CommonCodeGetRiskMatchNotificationDbgInfoUseCase, CommonCodeGetRiskMatchDbgInfoUseCase, CommonCodeGetMapStatesCasesDbgInfoUseCase, CommonCodeGetUserLocationsDbgInfoUseCase, CommonCodeGetVisitsDbgInfoUseCase, CommonCodeGetNextStepsUseCase, CommonCodeRuntimeTransactionCallbacks, CommonCodeRuntimeSqlPreparedStatement, CommonCodeRuntimeSqlCursor, CommonCodeRuntimeCloseable, CommonCodeRuntimeQueryListener, CommonCodeKotlinx_coroutines_coreFlowCollector, CommonCodeKotlinx_coroutines_coreChildHandle, CommonCodeKotlinx_coroutines_coreChildJob, CommonCodeKotlinx_coroutines_coreDisposableHandle, CommonCodeKotlinSequence, CommonCodeKotlinx_coroutines_coreSelectClause0, CommonCodeKotlinCoroutineContextKey, CommonCodeKotlinCoroutineContextElement, CommonCodeKotlinCoroutineContext, CommonCodeKotlinx_serialization_coreEncoder, CommonCodeKotlinx_serialization_coreSerialDescriptor, CommonCodeKotlinx_serialization_coreSerializationStrategy, CommonCodeKotlinx_serialization_coreDecoder, CommonCodeKotlinx_serialization_coreDeserializationStrategy, CommonCodeKotlinx_coroutines_coreCoroutineScope, CommonCodeKtor_ioCloseable, CommonCodeKtor_client_coreHttpClientEngine, CommonCodeKtor_client_coreHttpClientEngineCapability, CommonCodeKtor_utilsAttributes, CommonCodeKotlinIterator, CommonCodeKotlinx_coroutines_coreParentJob, CommonCodeKotlinx_coroutines_coreSelectInstance, CommonCodeKotlinSuspendFunction0, CommonCodeKotlinx_serialization_coreCompositeEncoder, CommonCodeKotlinAnnotation, CommonCodeKotlinx_serialization_coreCompositeDecoder, CommonCodeKtor_client_coreHttpClientFeature, CommonCodeKtor_httpHttpMessageBuilder, CommonCodeKtor_ioByteReadChannel, CommonCodeKtor_client_coreHttpRequest, CommonCodeKotlinContinuation, CommonCodeKotlinContinuationInterceptor, CommonCodeKotlinx_coroutines_coreRunnable, CommonCodeKotlinSuspendFunction2, CommonCodeKotlinFunction, CommonCodeKotlinx_serialization_coreSerializersModuleCollector, CommonCodeKotlinKClass, CommonCodeKtor_httpHeaders, CommonCodeKtor_utilsStringValues, CommonCodeKotlinMapEntry, CommonCodeKtor_ioReadSession, CommonCodeKotlinSuspendFunction1, CommonCodeKotlinAppendable, CommonCodeKotlinKType, CommonCodeKtor_httpHttpMessage, CommonCodeKotlinKDeclarationContainer, CommonCodeKotlinKAnnotatedElement, CommonCodeKotlinKClassifier, CommonCodeKtor_httpParameters, CommonCodeKtor_ioObjectPool, CommonCodeKtor_ioInput, CommonCodeKtor_ioOutput;
+@protocol CommonCodeMapRegionCaseCacheTableQueries, CommonCodeMapRegionCaseLegendTableQueries, CommonCodeMapRegionCaseTableQueries, CommonCodeMapRegionGeoRingTableQueries, CommonCodeMapRegionTableQueries, CommonCodeMapStatesCaseTableQueries, CommonCodeRiskMatchNotificationTableQueries, CommonCodeRiskMatchTableQueries, CommonCodeStaticPagesCacheTableQueries, CommonCodeUserLocationTableQueries, CommonCodeVisitTableQueries, CommonCodeRuntimeTransactionWithoutReturn, CommonCodeRuntimeTransactionWithReturn, CommonCodeRuntimeTransacter, CommonCodeAppDatabase, CommonCodeRuntimeSqlDriver, CommonCodeRuntimeSqlDriverSchema, CommonCodeRuntimeColumnAdapter, CommonCodeKotlinComparable, CommonCodeGetStaticPageUseCase, CommonCodeNetworkParametersSendStrategy, CommonCodeStaticPagesNetworkApi, CommonCodeStaticPagesDbApi, CommonCodeCleanRiskMatchesCacheUseCase, CommonCodeGetNotNotifiedRiskMatchesUseCase, CommonCodeGetNotRiskyVisitsForDayUseCase, CommonCodeGetRiskMatchesForDayUseCase, CommonCodeGetRiskMatchesForPeriodUseCase, CommonCodeMarkAsNotifiedRiskMatchesUseCase, CommonCodeObserveNotNotifiedRiskMatchesUseCase, CommonCodeObserveRiskDatesOffsetsFromCurrentDateForPeriod, CommonCodeObserveRiskMatchForPeriodUseCase, CommonCodeObserveRiskMatchesForTodayUseCase, CommonCodePerformRiskMatchingForDayUseCase, CommonCodeKotlinx_coroutines_coreFlow, CommonCodeAnalyseRiskMatchUseCase, CommonCodeRiskMatchDbApi, CommonCodeVisitsDbApi, CommonCodeCreateRiskMatchNotificationUseCase, CommonCodeKotlinx_coroutines_coreJob, CommonCodeGetVisitsBetweenTimestampsUseCase, CommonCodeGetMapRegionIdByPositionUseCase, CommonCodeGetMapRegionInfoUseCase, CommonCodeCreateMapRegionsUseCase, CommonCodeJsonFileReader, CommonCodeGetMapRegionsUseCase, CommonCodeGetMapRegionsWithGeometryUseCase, CommonCodeKotlinx_serialization_coreKSerializer, CommonCodeGetLastUserLocationUseCase, CommonCodeGetUserLocationsForDayByTimestampUseCase, CommonCodeGetVisitsForDayUseCase, CommonCodeObserveVisitsUseCase, CommonCodeSaveUserLocationsUseCase, CommonCodeUpdateVisitsUseCase, CommonCodeDebugRecalculateVisitsUseCase, CommonCodeUserLocationsDbApi, CommonCodeGetMapRegionCasesLegendUseCase, CommonCodeGetMapRegionCasesByTimestampUseCase, CommonCodeGetMapStatesCasesByTimestampUseCase, CommonCodeSaveMapRegionsCasesByTimestampSecUseCase, CommonCodeCasesNetworkApi, CommonCodeCasesDbApi, CommonCodeGetMapRegionCasesDbgInfoUseCase, CommonCodeGetMapRegionLegendDbgInfoUseCase, CommonCodeGetMapRegionsDbgInfoUseCase, CommonCodeGetRiskMatchNotificationDbgInfoUseCase, CommonCodeGetRiskMatchDbgInfoUseCase, CommonCodeGetMapStatesCasesDbgInfoUseCase, CommonCodeGetUserLocationsDbgInfoUseCase, CommonCodeGetVisitsDbgInfoUseCase, CommonCodeRuntimeTransactionCallbacks, CommonCodeRuntimeSqlPreparedStatement, CommonCodeRuntimeSqlCursor, CommonCodeRuntimeCloseable, CommonCodeRuntimeQueryListener, CommonCodeKotlinIterator, CommonCodeKotlinx_coroutines_coreFlowCollector, CommonCodeKotlinx_coroutines_coreChildHandle, CommonCodeKotlinx_coroutines_coreChildJob, CommonCodeKotlinx_coroutines_coreDisposableHandle, CommonCodeKotlinSequence, CommonCodeKotlinx_coroutines_coreSelectClause0, CommonCodeKotlinCoroutineContextKey, CommonCodeKotlinCoroutineContextElement, CommonCodeKotlinCoroutineContext, CommonCodeKotlinx_serialization_coreEncoder, CommonCodeKotlinx_serialization_coreSerialDescriptor, CommonCodeKotlinx_serialization_coreSerializationStrategy, CommonCodeKotlinx_serialization_coreDecoder, CommonCodeKotlinx_serialization_coreDeserializationStrategy, CommonCodeKotlinx_coroutines_coreCoroutineScope, CommonCodeKtor_ioCloseable, CommonCodeKtor_client_coreHttpClientEngine, CommonCodeKtor_client_coreHttpClientEngineCapability, CommonCodeKtor_utilsAttributes, CommonCodeKotlinx_coroutines_coreParentJob, CommonCodeKotlinx_coroutines_coreSelectInstance, CommonCodeKotlinSuspendFunction0, CommonCodeKotlinx_serialization_coreCompositeEncoder, CommonCodeKotlinAnnotation, CommonCodeKotlinx_serialization_coreCompositeDecoder, CommonCodeKtor_client_coreHttpClientFeature, CommonCodeKtor_httpHttpMessageBuilder, CommonCodeKtor_ioByteReadChannel, CommonCodeKtor_client_coreHttpRequest, CommonCodeKotlinContinuation, CommonCodeKotlinContinuationInterceptor, CommonCodeKotlinx_coroutines_coreRunnable, CommonCodeKotlinSuspendFunction2, CommonCodeKotlinFunction, CommonCodeKotlinx_serialization_coreSerializersModuleCollector, CommonCodeKotlinKClass, CommonCodeKtor_httpHeaders, CommonCodeKtor_utilsStringValues, CommonCodeKotlinMapEntry, CommonCodeKtor_ioReadSession, CommonCodeKotlinSuspendFunction1, CommonCodeKotlinAppendable, CommonCodeKotlinKType, CommonCodeKtor_httpHttpMessage, CommonCodeKotlinKDeclarationContainer, CommonCodeKotlinKAnnotatedElement, CommonCodeKotlinKClassifier, CommonCodeKtor_httpParameters, CommonCodeKtor_ioObjectPool, CommonCodeKtor_ioInput, CommonCodeKtor_ioOutput;
 
 NS_ASSUME_NONNULL_BEGIN
 #pragma clang diagnostic push
@@ -606,12 +606,12 @@ __attribute__((swift_name("DateUtils")))
 - (int64_t)dayEndTimestampTimestampSec:(int64_t)timestampSec __attribute__((swift_name("dayEndTimestamp(timestampSec:)")));
 - (int64_t)dayStartTimestampTimestampSec:(int64_t)timestampSec __attribute__((swift_name("dayStartTimestamp(timestampSec:)")));
 - (int32_t)daysBetweenTimestampFromSec:(int64_t)timestampFromSec timestampToSec:(int64_t)timestampToSec __attribute__((swift_name("daysBetween(timestampFromSec:timestampToSec:)")));
-- (NSString *)formattedDateTimestampSec:(int64_t)timestampSec __attribute__((swift_name("formattedDate(timestampSec:)")));
-- (NSString *)formattedPeriodBetweenTimestampStartSec:(int64_t)timestampStartSec timestampEndSec:(int64_t)timestampEndSec __attribute__((swift_name("formattedPeriodBetween(timestampStartSec:timestampEndSec:)")));
-- (NSString *)formattedTimeTimestampSec:(int64_t)timestampSec __attribute__((swift_name("formattedTime(timestampSec:)")));
+- (NSString *)formattedDateTimestampSec:(int64_t)timestampSec timeZone:(CommonCodeDateUtilsTZone *)timeZone __attribute__((swift_name("formattedDate(timestampSec:timeZone:)")));
+- (NSString *)formattedPeriodBetweenTimestampStartSec:(int64_t)timestampStartSec timestampEndSec:(int64_t)timestampEndSec timeZone:(CommonCodeDateUtilsTZone *)timeZone __attribute__((swift_name("formattedPeriodBetween(timestampStartSec:timestampEndSec:timeZone:)")));
+- (NSString *)formattedTimeTimestampSec:(int64_t)timestampSec timeZone:(CommonCodeDateUtilsTZone *)timeZone __attribute__((swift_name("formattedTime(timestampSec:timeZone:)")));
 - (BOOL)isTodayTimestampSec:(int64_t)timestampSec __attribute__((swift_name("isToday(timestampSec:)")));
 - (int64_t)nowTimestampSec __attribute__((swift_name("nowTimestampSec()")));
-- (NSString *)pointFormattedDateTimestampSec:(int64_t)timestampSec __attribute__((swift_name("pointFormattedDate(timestampSec:)")));
+- (NSString *)pointFormattedDateTimestampSec:(int64_t)timestampSec timeZone:(CommonCodeDateUtilsTZone *)timeZone __attribute__((swift_name("pointFormattedDate(timestampSec:timeZone:)")));
 - (NSArray<CommonCodeDateUtilsDayInterval *> *)splitTimestampsInDayIntervalsStartTimestampSec:(int64_t)startTimestampSec endTimestampSec:(int64_t)endTimestampSec __attribute__((swift_name("splitTimestampsInDayIntervals(startTimestampSec:endTimestampSec:)")));
 - (int64_t)timestampAtStartOfDayByAddingDaysTimestampSec:(int64_t)timestampSec days:(int32_t)days __attribute__((swift_name("timestampAtStartOfDayByAddingDays(timestampSec:days:)")));
 @end;
@@ -628,6 +628,34 @@ __attribute__((swift_name("DateUtils.DayInterval")))
 - (NSString *)description __attribute__((swift_name("description()")));
 @property (readonly) int64_t endTimestampSec __attribute__((swift_name("endTimestampSec")));
 @property (readonly) int64_t startTimestampSec __attribute__((swift_name("startTimestampSec")));
+@end;
+
+__attribute__((swift_name("KotlinComparable")))
+@protocol CommonCodeKotlinComparable
+@required
+- (int32_t)compareToOther:(id _Nullable)other __attribute__((swift_name("compareTo(other:)")));
+@end;
+
+__attribute__((swift_name("KotlinEnum")))
+@interface CommonCodeKotlinEnum<E> : CommonCodeBase <CommonCodeKotlinComparable>
+- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer));
+- (int32_t)compareToOther:(E)other __attribute__((swift_name("compareTo(other:)")));
+- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
+- (NSUInteger)hash __attribute__((swift_name("hash()")));
+- (NSString *)description __attribute__((swift_name("description()")));
+@property (readonly) NSString *name __attribute__((swift_name("name")));
+@property (readonly) int32_t ordinal __attribute__((swift_name("ordinal")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("DateUtils.TZone")))
+@interface CommonCodeDateUtilsTZone : CommonCodeKotlinEnum<CommonCodeDateUtilsTZone *>
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
+- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
+@property (class, readonly) CommonCodeDateUtilsTZone *current __attribute__((swift_name("current")));
+@property (class, readonly) CommonCodeDateUtilsTZone *utc __attribute__((swift_name("utc")));
++ (CommonCodeKotlinArray<CommonCodeDateUtilsTZone *> *)values __attribute__((swift_name("values()")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -1023,23 +1051,6 @@ __attribute__((swift_name("PerformRiskMatchingForDayUseCaseImpl")))
 - (void)invokeTimestampSec:(int64_t)timestampSec completionHandler:(void (^)(CommonCodeBoolean * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("invoke(timestampSec:completionHandler:)")));
 @end;
 
-__attribute__((swift_name("KotlinComparable")))
-@protocol CommonCodeKotlinComparable
-@required
-- (int32_t)compareToOther:(id _Nullable)other __attribute__((swift_name("compareTo(other:)")));
-@end;
-
-__attribute__((swift_name("KotlinEnum")))
-@interface CommonCodeKotlinEnum<E> : CommonCodeBase <CommonCodeKotlinComparable>
-- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer));
-- (int32_t)compareToOther:(E)other __attribute__((swift_name("compareTo(other:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSString *name __attribute__((swift_name("name")));
-@property (readonly) int32_t ordinal __attribute__((swift_name("ordinal")));
-@end;
-
 __attribute__((objc_subclassing_restricted))
 __attribute__((swift_name("RiskMatchType")))
 @interface CommonCodeRiskMatchType : CommonCodeKotlinEnum<CommonCodeRiskMatchType *>
@@ -1049,6 +1060,7 @@ __attribute__((swift_name("RiskMatchType")))
 @property (class, readonly) CommonCodeRiskMatchType *regionChange __attribute__((swift_name("regionChange")));
 @property (class, readonly) CommonCodeRiskMatchType *severityIncrease __attribute__((swift_name("severityIncrease")));
 @property (class, readonly) CommonCodeRiskMatchType *remain __attribute__((swift_name("remain")));
++ (CommonCodeKotlinArray<CommonCodeRiskMatchType *> *)values __attribute__((swift_name("values()")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -2110,90 +2122,6 @@ __attribute__((swift_name("GetVisitsDbgInfoUseCase")))
 - (void)invokeWithCompletionHandler:(void (^)(NSArray<CommonCodeVisitTable *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("invoke(completionHandler:)")));
 @end;
 
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("GetNextStepsUseCaseFactory")))
-@interface CommonCodeGetNextStepsUseCaseFactory : CommonCodeBase
-- (instancetype)initWithDatabaseWrapper:(CommonCodeDatabaseWrapper *)databaseWrapper endpoints:(CommonCodeEndpoints *)endpoints __attribute__((swift_name("init(databaseWrapper:endpoints:)"))) __attribute__((objc_designated_initializer));
-- (id<CommonCodeGetNextStepsUseCase>)createGetNextStepsUseCase __attribute__((swift_name("createGetNextStepsUseCase()")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("NextStepGroup")))
-@interface CommonCodeNextStepGroup : CommonCodeBase
-- (instancetype)initWithTitle:(NSString *)title items:(NSArray<CommonCodeNextStepItem *> *)items __attribute__((swift_name("init(title:items:)"))) __attribute__((objc_designated_initializer));
-- (NSString *)component1 __attribute__((swift_name("component1()")));
-- (NSArray<CommonCodeNextStepItem *> *)component2 __attribute__((swift_name("component2()")));
-- (CommonCodeNextStepGroup *)doCopyTitle:(NSString *)title items:(NSArray<CommonCodeNextStepItem *> *)items __attribute__((swift_name("doCopy(title:items:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSArray<CommonCodeNextStepItem *> *items __attribute__((swift_name("items")));
-@property (readonly) NSString *title __attribute__((swift_name("title")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("NextStepItem")))
-@interface CommonCodeNextStepItem : CommonCodeBase
-- (instancetype)initWithType:(CommonCodeNextStepType *)type title:(NSString *)title subtitle:(NSString * _Nullable)subtitle __attribute__((swift_name("init(type:title:subtitle:)"))) __attribute__((objc_designated_initializer));
-- (CommonCodeNextStepType *)component1 __attribute__((swift_name("component1()")));
-- (NSString *)component2 __attribute__((swift_name("component2()")));
-- (NSString * _Nullable)component3 __attribute__((swift_name("component3()")));
-- (CommonCodeNextStepItem *)doCopyType:(CommonCodeNextStepType *)type title:(NSString *)title subtitle:(NSString * _Nullable)subtitle __attribute__((swift_name("doCopy(type:title:subtitle:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property NSString * _Nullable subtitle __attribute__((swift_name("subtitle")));
-@property (readonly) NSString *title __attribute__((swift_name("title")));
-@property CommonCodeNextStepType *type __attribute__((swift_name("type")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("NextStepSection")))
-@interface CommonCodeNextStepSection : CommonCodeBase
-- (instancetype)initWithGroups:(NSArray<CommonCodeNextStepGroup *> *)groups __attribute__((swift_name("init(groups:)"))) __attribute__((objc_designated_initializer));
-- (NSArray<CommonCodeNextStepGroup *> *)component1 __attribute__((swift_name("component1()")));
-- (CommonCodeNextStepSection *)doCopyGroups:(NSArray<CommonCodeNextStepGroup *> *)groups __attribute__((swift_name("doCopy(groups:)")));
-- (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
-- (NSUInteger)hash __attribute__((swift_name("hash()")));
-- (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly) NSArray<CommonCodeNextStepGroup *> *groups __attribute__((swift_name("groups")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("NextStepType")))
-@interface CommonCodeNextStepType : CommonCodeKotlinEnum<CommonCodeNextStepType *>
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-- (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
-@property (class, readonly) CommonCodeNextStepType *date __attribute__((swift_name("date")));
-@property (class, readonly) CommonCodeNextStepType *time __attribute__((swift_name("time")));
-@property (class, readonly) CommonCodeNextStepType *helpline __attribute__((swift_name("helpline")));
-@property (class, readonly) CommonCodeNextStepType *keepDistance __attribute__((swift_name("keepDistance")));
-@property (class, readonly) CommonCodeNextStepType *place __attribute__((swift_name("place")));
-@property (class, readonly) CommonCodeNextStepType *warning __attribute__((swift_name("warning")));
-@end;
-
-__attribute__((swift_name("GetNextStepsUseCase")))
-@protocol CommonCodeGetNextStepsUseCase
-@required
-
-/**
- @note This method converts all Kotlin exceptions to errors.
-*/
-- (void)invokeDaysPeriod:(int32_t)daysPeriod completionHandler:(void (^)(NSArray<CommonCodeNextStepSection *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("invoke(daysPeriod:completionHandler:)")));
-@end;
-
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("GetNextStepsUseCaseImpl")))
-@interface CommonCodeGetNextStepsUseCaseImpl : CommonCodeBase <CommonCodeGetNextStepsUseCase>
-- (instancetype)initWithGetRiskMatchesForPeriodUseCase:(id<CommonCodeGetRiskMatchesForPeriodUseCase>)getRiskMatchesForPeriodUseCase getMapRegionInfoUseCase:(id<CommonCodeGetMapRegionInfoUseCase>)getMapRegionInfoUseCase __attribute__((swift_name("init(getRiskMatchesForPeriodUseCase:getMapRegionInfoUseCase:)"))) __attribute__((objc_designated_initializer));
-
-/**
- @note This method converts all Kotlin exceptions to errors.
-*/
-- (void)invokeDaysPeriod:(int32_t)daysPeriod completionHandler:(void (^)(NSArray<CommonCodeNextStepSection *> * _Nullable, NSError * _Nullable))completionHandler __attribute__((swift_name("invoke(daysPeriod:completionHandler:)")));
-@end;
-
 __attribute__((swift_name("AppHttpClient")))
 @protocol CommonCodeAppHttpClient
 @required
@@ -2216,6 +2144,7 @@ __attribute__((swift_name("NetworkApiParameterNames")))
 - (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 @property (class, readonly) CommonCodeNetworkApiParameterNames *timestamp __attribute__((swift_name("timestamp")));
 @property (class, readonly) CommonCodeNetworkApiParameterNames *language __attribute__((swift_name("language")));
++ (CommonCodeKotlinArray<CommonCodeNetworkApiParameterNames *> *)values __attribute__((swift_name("values()")));
 @property (readonly) NSString *parameter __attribute__((swift_name("parameter")));
 @end;
 
@@ -2340,6 +2269,18 @@ __attribute__((swift_name("RuntimeQuery")))
 - (void)notifyDataChanged __attribute__((swift_name("notifyDataChanged()")));
 - (void)removeListenerListener:(id<CommonCodeRuntimeQueryListener>)listener __attribute__((swift_name("removeListener(listener:)")));
 @property (readonly) RowType (^mapper)(id<CommonCodeRuntimeSqlCursor>) __attribute__((swift_name("mapper")));
+@end;
+
+__attribute__((objc_subclassing_restricted))
+__attribute__((swift_name("KotlinArray")))
+@interface CommonCodeKotlinArray<T> : CommonCodeBase
++ (instancetype)arrayWithSize:(int32_t)size init:(T _Nullable (^)(CommonCodeInt *))init __attribute__((swift_name("init(size:init:)")));
++ (instancetype)alloc __attribute__((unavailable));
++ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
+- (T _Nullable)getIndex:(int32_t)index __attribute__((swift_name("get(index:)")));
+- (id<CommonCodeKotlinIterator>)iterator __attribute__((swift_name("iterator()")));
+- (void)setIndex:(int32_t)index value:(T _Nullable)value __attribute__((swift_name("set(index:value:)")));
+@property (readonly) int32_t size __attribute__((swift_name("size")));
 @end;
 
 __attribute__((swift_name("KotlinException")))
@@ -2506,18 +2447,6 @@ __attribute__((swift_name("Ktor_client_coreHttpClient")))
 @property (readonly) CommonCodeKtor_client_coreHttpSendPipeline *sendPipeline __attribute__((swift_name("sendPipeline")));
 @end;
 
-__attribute__((objc_subclassing_restricted))
-__attribute__((swift_name("KotlinArray")))
-@interface CommonCodeKotlinArray<T> : CommonCodeBase
-+ (instancetype)arrayWithSize:(int32_t)size init:(T _Nullable (^)(CommonCodeInt *))init __attribute__((swift_name("init(size:init:)")));
-+ (instancetype)alloc __attribute__((unavailable));
-+ (instancetype)allocWithZone:(struct _NSZone *)zone __attribute__((unavailable));
-- (T _Nullable)getIndex:(int32_t)index __attribute__((swift_name("get(index:)")));
-- (id<CommonCodeKotlinIterator>)iterator __attribute__((swift_name("iterator()")));
-- (void)setIndex:(int32_t)index value:(T _Nullable)value __attribute__((swift_name("set(index:value:)")));
-@property (readonly) int32_t size __attribute__((swift_name("size")));
-@end;
-
 __attribute__((swift_name("RuntimeTransacterTransaction")))
 @interface CommonCodeRuntimeTransacterTransaction : CommonCodeBase <CommonCodeRuntimeTransactionCallbacks>
 - (instancetype)init __attribute__((swift_name("init()"))) __attribute__((objc_designated_initializer));
@@ -2551,6 +2480,13 @@ __attribute__((swift_name("RuntimeQueryListener")))
 @protocol CommonCodeRuntimeQueryListener
 @required
 - (void)queryResultsChanged __attribute__((swift_name("queryResultsChanged()")));
+@end;
+
+__attribute__((swift_name("KotlinIterator")))
+@protocol CommonCodeKotlinIterator
+@required
+- (BOOL)hasNext __attribute__((swift_name("hasNext()")));
+- (id _Nullable)next_ __attribute__((swift_name("next_()")));
 @end;
 
 __attribute__((swift_name("Kotlinx_coroutines_coreFlowCollector")))
@@ -2859,13 +2795,6 @@ __attribute__((swift_name("Ktor_client_coreHttpSendPipeline")))
 - (instancetype)initWithPhase:(CommonCodeKtor_utilsPipelinePhase *)phase interceptors:(NSArray<id<CommonCodeKotlinSuspendFunction2>> *)interceptors __attribute__((swift_name("init(phase:interceptors:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 - (instancetype)initWithPhases:(CommonCodeKotlinArray<CommonCodeKtor_utilsPipelinePhase *> *)phases __attribute__((swift_name("init(phases:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 @property (readonly) BOOL developmentMode __attribute__((swift_name("developmentMode")));
-@end;
-
-__attribute__((swift_name("KotlinIterator")))
-@protocol CommonCodeKotlinIterator
-@required
-- (BOOL)hasNext __attribute__((swift_name("hasNext()")));
-- (id _Nullable)next_ __attribute__((swift_name("next_()")));
 @end;
 
 __attribute__((objc_subclassing_restricted))
@@ -3477,7 +3406,7 @@ __attribute__((swift_name("Ktor_httpHttpStatusCode")))
 - (BOOL)isEqual:(id _Nullable)other __attribute__((swift_name("isEqual(_:)")));
 - (NSUInteger)hash __attribute__((swift_name("hash()")));
 - (NSString *)description __attribute__((swift_name("description()")));
-@property (readonly, getter=description_) NSString *description __attribute__((swift_name("description")));
+@property (readonly) NSString *description_ __attribute__((swift_name("description_")));
 @property (readonly) int32_t value __attribute__((swift_name("value")));
 @end;
 
@@ -3749,6 +3678,7 @@ __attribute__((swift_name("Ktor_ioByteOrder")))
 - (instancetype)initWithName:(NSString *)name ordinal:(int32_t)ordinal __attribute__((swift_name("init(name:ordinal:)"))) __attribute__((objc_designated_initializer)) __attribute__((unavailable));
 @property (class, readonly) CommonCodeKtor_ioByteOrder *bigEndian __attribute__((swift_name("bigEndian")));
 @property (class, readonly) CommonCodeKtor_ioByteOrder *littleEndian __attribute__((swift_name("littleEndian")));
++ (CommonCodeKotlinArray<CommonCodeKtor_ioByteOrder *> *)values __attribute__((swift_name("values()")));
 @end;
 
 __attribute__((swift_name("KotlinKType")))
@@ -3856,6 +3786,7 @@ __attribute__((swift_name("Ktor_utilsWeekDay")))
 @property (class, readonly) CommonCodeKtor_utilsWeekDay *friday __attribute__((swift_name("friday")));
 @property (class, readonly) CommonCodeKtor_utilsWeekDay *saturday __attribute__((swift_name("saturday")));
 @property (class, readonly) CommonCodeKtor_utilsWeekDay *sunday __attribute__((swift_name("sunday")));
++ (CommonCodeKotlinArray<CommonCodeKtor_utilsWeekDay *> *)values __attribute__((swift_name("values()")));
 @property (readonly) NSString *value __attribute__((swift_name("value")));
 @end;
 
@@ -3877,6 +3808,7 @@ __attribute__((swift_name("Ktor_utilsMonth")))
 @property (class, readonly) CommonCodeKtor_utilsMonth *october __attribute__((swift_name("october")));
 @property (class, readonly) CommonCodeKtor_utilsMonth *november __attribute__((swift_name("november")));
 @property (class, readonly) CommonCodeKtor_utilsMonth *december __attribute__((swift_name("december")));
++ (CommonCodeKotlinArray<CommonCodeKtor_utilsMonth *> *)values __attribute__((swift_name("values()")));
 @property (readonly) NSString *value __attribute__((swift_name("value")));
 @end;
 
@@ -3980,6 +3912,7 @@ __attribute__((swift_name("KotlinKVariance")))
 @property (class, readonly) CommonCodeKotlinKVariance *invariant __attribute__((swift_name("invariant")));
 @property (class, readonly) CommonCodeKotlinKVariance *in __attribute__((swift_name("in")));
 @property (class, readonly) CommonCodeKotlinKVariance *out __attribute__((swift_name("out")));
++ (CommonCodeKotlinArray<CommonCodeKotlinKVariance *> *)values __attribute__((swift_name("values()")));
 @end;
 
 #pragma clang diagnostic pop
