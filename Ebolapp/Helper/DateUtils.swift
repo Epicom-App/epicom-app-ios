@@ -9,7 +9,11 @@ import CommonCode
 class DateUtils {
 
     static func formattedPeriodBetween(timestampStartSec: TimeInterval, timestampEndSec: TimeInterval) -> String {
-        return CommonCode.DateUtils().formattedPeriodBetween(timestampStartSec: Int64(timestampStartSec), timestampEndSec: Int64(timestampEndSec))
+        return CommonCode.DateUtils().formattedPeriodBetween(
+            timestampStartSec: Int64(timestampStartSec),
+            timestampEndSec: Int64(timestampEndSec),
+            timeZone: .current
+        )
     }
 
     static func dayStartTimestamp(timestampSec: TimeInterval) -> TimeInterval {

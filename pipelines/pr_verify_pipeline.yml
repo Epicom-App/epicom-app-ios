@@ -3,6 +3,10 @@ variables:
   - name: BUNDLE_PATH
     value: $(Pipeline.Workspace)/.bundle
 
+pr:
+  - master
+  - develop
+
 trigger: none
 
 pool:

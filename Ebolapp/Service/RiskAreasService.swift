@@ -114,7 +114,12 @@ class RiskAreasService: RiskAreasServiceInput {
     private weak var observeRiskMatchesJob: Kotlinx_coroutines_coreJob?
     private weak var currentGetMapRegionsJob: Kotlinx_coroutines_coreJob?
     private weak var output: AnyObject?
-    
+
+    deinit {
+        self.observeRiskMatchesJob?.cancel(cause: .none)
+        self.currentGetMapRegionsJob?.cancel(cause: .none)
+    }
+
     init(output: AnyObject) {
         self.output = output
     }

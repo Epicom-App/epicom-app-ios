@@ -66,22 +66,8 @@ final class AppCenterHelper: NSObject {
     }
     
     private func isAppCenterEnabled(completion: @escaping (Bool) -> Void) {
-        // TODO
-        completion(true)
-//        if self.userDefaults.object(forKey: UserDefaultsKeys.appCenterActive) != nil {
-//            completion(self.appCenterActive)
-//        } else {
-//            let alert = UIAlertController(title: "crash_dialog_title".localized(withSender: self), message: "crash_dialog_message".localized(withSender: self), preferredStyle: .alert)
-//            alert.addAction(UIAlertAction(title: "crash_dialog_yes".localized(withSender: self), style: .default, handler: { (_) in
-//                self.appCenterActive = true
-//                completion(true)
-//            }))
-//            alert.addAction(UIAlertAction(title: "crash_dialog_no".localized(withSender: self), style: .default, handler: { (_) in
-//                self.appCenterActive = false
-//                completion(false)
-//            }))
-//            alert.present(animated: true, completion: nil)
-//        }
+        let enabledIn: [BuildConfiguration] = [.debug, .adHoc, .enterprise]
+        completion(enabledIn.contains(.current))
     }
 }
 
