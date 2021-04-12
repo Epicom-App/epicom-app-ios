@@ -3,6 +3,6 @@ GENERATED - DO NOT MODIFY - use StringResGen instead.
 
 Created by StringResGen.
 */
-"NSLocationAlwaysAndWhenInUseUsageDescription"="always and when in use description";
-"NSLocationAlwaysUsageDescription"="always description";
-"NSLocationWhenInUseUsageDescription"="when in use description";
+"NSLocationAlwaysAndWhenInUseUsageDescription"="Aktiviere die Standortfreigabe, damit deine Aufenthaltsorte aufgezeichnet werden können, auch wenn die App geschlossen ist. Wir nutzen die Standorte, um sie gegen als riskant eingestufte Regionen abzugleichen und dich bei einer Übereinstimmung zu informieren. Alle Daten werden nur lokal gespeichert.";
+"NSLocationAlwaysUsageDescription"="Aktiviere die Standortfreigabe, damit deine Aufenthaltsorte aufgezeichnet werden können, auch wenn die App geschlossen ist. Wir nutzen die Standorte, um sie gegen als riskant eingestufte Regionen abzugleichen und dich bei einer Übereinstimmung zu informieren. Alle Daten werden nur lokal gespeichert.";
+"NSLocationWhenInUseUsageDescription"="Aktiviere die Standortfreigabe, damit deine Aufenthaltsorte aufgezeichnet werden können, auch wenn die App geschlossen ist. Wir nutzen die Standorte, um sie gegen als riskant eingestufte Regionen abzugleichen und dich bei einer Übereinstimmung zu informieren. Alle Daten werden nur lokal gespeichert.";

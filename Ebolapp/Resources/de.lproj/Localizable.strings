@@ -5,7 +5,7 @@ Created by StringResGen.
 */
 "loading_text"="Wird geladen";
 "no_location_title"="Kein Standortzugriff";
-"no_location_info"="Öffne die Einstellungen, um die Standortverfolgung im Hintergrund zu aktivieren.";
+"no_location_info"="Öffne die Einstellungen, um die Standortverfolgung im Hintergrund zu aktivieren. Wir nutzen die Standorte, um sie gegen als riskant eingestufte Regionen abzugleichen und dich bei einer Übereinstimmung zu informieren. Alle Daten werden nur lokal gespeichert.";
 "error_title"="Fehler";
 "no_internet_error_title"="Keine Internetverbindung";
 "no_internet_error_message"="Daten konnten nicht geladen werden";
@@ -46,8 +46,8 @@ Created by StringResGen.
 "nextSteps_riskMatch_faq_title"="FAQ";
 "nextSteps_riskMatch_faq_message"="Diese App kann das Infektionsrisiko einschätzen und geeignete Maßnahmen ergreifen.";
 "nextSteps_riskMatch_placeholder"="nKeine registrierten Risikoübereinstimmungen.";
-"location_rationale_title"="Dummy Location Rationale Title";
-"location_rationale_message"="Dummy Location Rationale Message";
+"location_rationale_title"="Standort-Freigabe";
+"location_rationale_message"="Aktiviere die Standortfreigabe, damit deine Aufenthaltsorte aufgezeichnet werden können, auch wenn die App geschlossen ist. Wir nutzen die Standorte, um sie gegen als riskant eingestufte Regionen abzugleichen und dich bei einer Übereinstimmung zu informieren. Alle Daten werden nur lokal gespeichert.";
 "risk_match_notification_channel_name"="nRisikoabgleich";
 "risk_match_notification_channel_description"="Benachrichtigt über neue Risikoübereinstimmungen";
 "new_risk_match_notification_title"="Aktuelles Gefahrenlevel";
