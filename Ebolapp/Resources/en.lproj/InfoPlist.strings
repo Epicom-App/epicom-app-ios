@@ -3,6 +3,6 @@ GENERATED - DO NOT MODIFY - use StringResGen instead.
 
 Created by StringResGen.
 */
-"NSLocationAlwaysAndWhenInUseUsageDescription"="always and when in use description";
-"NSLocationAlwaysUsageDescription"="always description";
-"NSLocationWhenInUseUsageDescription"="when in use description";
+"NSLocationAlwaysAndWhenInUseUsageDescription"="Enable location sharing in order to make your position recordable even when the app is closed. We use the locations to match them against regions considered risky and notify you if there is a match. All data is stored locally only.";
+"NSLocationAlwaysUsageDescription"="Enable location sharing in order to make your position recordable even when the app is closed. We use the locations to match them against regions considered risky and notify you if there is a match. All data is stored locally only.";
+"NSLocationWhenInUseUsageDescription"="Enable location sharing in order to make your position recordable even when the app is closed. We use the locations to match them against regions considered risky and notify you if there is a match. All data is stored locally only.";

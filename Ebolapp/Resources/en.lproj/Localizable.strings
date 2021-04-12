@@ -5,7 +5,7 @@ Created by StringResGen.
 */
 "loading_text"="Loading";
 "no_location_title"="No Location Access";
-"no_location_info"="Open Settings to enable background location tracking.";
+"no_location_info"="Open Settings to enable background location tracking. We use the locations to match them against regions considered risky and notify you if there is a match. All data is stored locally only.";
 "error_title"="Error";
 "no_internet_error_title"="No Internet Connection";
 "no_internet_error_message"="Data could not be loaded";
@@ -46,8 +46,8 @@ Created by StringResGen.
 "nextSteps_riskMatch_faq_title"="FAQ";
 "nextSteps_riskMatch_faq_message"="This app can assess the risk of infection and take appropriate measures.";
 "nextSteps_riskMatch_placeholder"="No registered risk matches.";
-"location_rationale_title"="Dummy Location Rationale Title";
-"location_rationale_message"="Dummy Location Rationale Message";
+"location_rationale_title"="Location approval";
+"location_rationale_message"="Enable location sharing in order to make your position recordable even when the app is closed. We use the locations to match them against regions considered risky and notify you if there is a match. All data is stored locally only.";
 "risk_match_notification_channel_name"="Risk Matching";
 "risk_match_notification_channel_description"="Notifies about new risk matches";
 "new_risk_match_notification_title"="Current danger level";
