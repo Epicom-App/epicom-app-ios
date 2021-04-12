@@ -31,9 +31,9 @@ internal enum L10n {
     internal static let legendNavigationTitle = L10n.tr("Localizable", "legend_navigation_title")
     /// Wird geladen
     internal static let loadingText = L10n.tr("Localizable", "loading_text")
-    /// Dummy Location Rationale Message
+    /// Aktiviere die Standortfreigabe, damit deine Aufenthaltsorte aufgezeichnet werden können, auch wenn die App geschlossen ist. Wir nutzen die Standorte, um sie gegen als riskant eingestufte Regionen abzugleichen und dich bei einer Übereinstimmung zu informieren. Alle Daten werden nur lokal gespeichert.
     internal static let locationRationaleMessage = L10n.tr("Localizable", "location_rationale_message")
-    /// Dummy Location Rationale Title
+    /// Standort-Freigabe
     internal static let locationRationaleTitle = L10n.tr("Localizable", "location_rationale_title")
     /// Aufgezeichneter Aufenthalt:
     internal static let mapLocationCalloutTitle = L10n.tr("Localizable", "map_location_callout_title")
@@ -95,7 +95,7 @@ internal enum L10n {
     internal static let noInternetErrorMessage = L10n.tr("Localizable", "no_internet_error_message")
     /// Keine Internetverbindung
     internal static let noInternetErrorTitle = L10n.tr("Localizable", "no_internet_error_title")
-    /// Öffne die Einstellungen, um die Standortverfolgung im Hintergrund zu aktivieren.
+    /// Öffne die Einstellungen, um die Standortverfolgung im Hintergrund zu aktivieren. Wir nutzen die Standorte, um sie gegen als riskant eingestufte Regionen abzugleichen und dich bei einer Übereinstimmung zu informieren. Alle Daten werden nur lokal gespeichert.
     internal static let noLocationInfo = L10n.tr("Localizable", "no_location_info")
     /// Kein Standortzugriff
     internal static let noLocationTitle = L10n.tr("Localizable", "no_location_title")

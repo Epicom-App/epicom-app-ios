@@ -35,7 +35,7 @@ then
         -keys C \
         -lang 3 \
         -from D \
-        -to D \
+        -to E \
         -fileName InfoPlist.strings
 
     # Tracking
