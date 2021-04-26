@@ -116,3 +116,10 @@ public class Waiter<Value>: WaiterInterface {
         self.cancel(silent: true)
     }
 }
+
+extension Waiter where Value == Void {
+
+    func serve(for key: String) {
+        self.serve(value: (), for: key)
+    }
+}

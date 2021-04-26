@@ -31,7 +31,7 @@ protocol MapViewInput: class {
     func hideCurrentMapInfo()
     func showCalendar(offset: Int)
     func hideCalendar()
-    func showCurrentUserLocation()
+    func showCurrentUserLocation(waitForLocationUpdate: Bool)
     func selectPolygon(id: String, hasParent: Bool)
     func deselectAllAnnotations()
     func selectAnnotation(annotation: MKAnnotation)
@@ -45,6 +45,7 @@ protocol MapViewInput: class {
     func hideDateAnnotation()
     func updateBadge(value: Int)
     func zoomToCoordinates(coordinates: [CLLocationCoordinate2D], animated: Bool)
+    func hideLocationButton()
 }
 
 final class MapViewPresentationLogic: MapViewOutput {
@@ -63,7 +64,7 @@ final class MapViewPresentationLogic: MapViewOutput {
     }
 
     private weak var view: MapViewInput?
-    private lazy var logicController = MapLogicController(output: self)
+    private lazy var logicController: MapLogicControllerInput = MapLogicController(output: self)
     private let alertsHelper = AlertsHelperFactory.createMapAlertsHelper()
     private var cache = Cache()
     private let waiter = Waiter<[CLLocationCoordinate2D]>(maxWaitTime: 5.0)
@@ -78,9 +79,7 @@ final class MapViewPresentationLogic: MapViewOutput {
     }
 
     func didTapLocationButton() {
-        self.view?.showCurrentUserLocation()
-        self.deselectCurrentPolygon()
-        self.view?.selectLocationButton()
+        self.logicController.didTapLocationButton()
     }
 
     func didTapShowCalendar() {
@@ -233,5 +232,15 @@ extension MapViewPresentationLogic: MapLogicControllerOutput {
         self.alertsHelper.showErrorAlert(type: .unknown) { [weak self] in
             self?.logicController.didChangeMapPosition(box: box)
         }
+    }
+
+    func showUserLocation(waitForLocationUpdate: Bool) {
+        self.view?.showCurrentUserLocation(waitForLocationUpdate: waitForLocationUpdate)
+        self.deselectCurrentPolygon()
+        self.view?.selectLocationButton()
+    }
+
+    func hideLocationButton() {
+        self.view?.hideLocationButton()
     }
 }

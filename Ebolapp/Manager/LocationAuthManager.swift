@@ -20,7 +20,8 @@ final class LocationAuthManager: NSObject {
     }
 
     private let locationManager = CLLocationManager()
-    private var authHandler: ((Result<Void, Error>) -> Void)?
+    private var authHandler: ((Result<CLAuthorizationStatus, Error>) -> Void)?
+    private var continuousUpdates = true
 
     var authorizationStatus: CLAuthorizationStatus {
         if #available(iOS 14.0, *) {
@@ -35,8 +36,11 @@ final class LocationAuthManager: NSObject {
         self.locationManager.delegate = self
     }
 
-    func requestAuthorization(type: RequestType = .whenInUse, handler: @escaping (Result<Void, Error>) -> Void) {
+    func requestAuthorization(type: RequestType = .whenInUse,
+                              continuous: Bool = true,
+                              handler: @escaping (Result<CLAuthorizationStatus, Error>) -> Void) {
         self.authHandler = handler
+        self.continuousUpdates = continuous
         switch type {
         case .always:
             self.locationManager.requestAlwaysAuthorization()
@@ -53,7 +57,11 @@ extension LocationAuthManager: CLLocationManagerDelegate {
         case .denied, .restricted, .notDetermined:
             self.authHandler?(.failure(AuthError.failed))
         default:
-            self.authHandler?(.success(()))
+            self.authHandler?(.success(status))
         }
+        guard !self.continuousUpdates else {
+            return
+        }
+        self.authHandler = nil
     }
 }
