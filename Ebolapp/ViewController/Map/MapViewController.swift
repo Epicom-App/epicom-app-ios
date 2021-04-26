@@ -13,6 +13,7 @@ class MapViewController: BaseViewController {
         static let userLocationZoom = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
         static let stateZoom = MKCoordinateSpan(latitudeDelta: 3.5, longitudeDelta: 3.5)
         static let regionZoom = MKCoordinateSpan(latitudeDelta: 1.5, longitudeDelta: 1.5)
+        static let kLocationUpdate = "locationUpdateKey"
     }
 
     @IBOutlet private weak var locationButton: UIButton!
@@ -27,6 +28,7 @@ class MapViewController: BaseViewController {
     private var mapInfoView: MapRegionInfoView?
     private var mapDatesSlider: MapDatesSlider?
     private var animator: ViewAnimator?
+    private var locationUpdateWaiter = Waiter<Void>(maxWaitTime: 1.0)
 
 	// MARK: - Life cycle
     
@@ -229,11 +231,7 @@ extension MapViewController: MKMapViewDelegate {
     }
 
     func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
-        self.locationButton.isHidden = false
-    }
-
-    func mapView(_ mapView: MKMapView, didFailToLocateUserWithError error: Error) {
-        self.locationButton.isHidden = true
+        self.locationUpdateWaiter.serve(for: Constant.kLocationUpdate)
     }
 }
 
@@ -297,10 +295,19 @@ extension MapViewController: MapViewInput {
         self.removeDatesSlider()
     }
 
-    func showCurrentUserLocation() {
-        let location = self.mapView.userLocation
-        let region = MKCoordinateRegion(center: location.coordinate, span: Constant.userLocationZoom)
-        self.mapView.setRegion(region, animated: true)
+    func showCurrentUserLocation(waitForLocationUpdate: Bool) {
+        if waitForLocationUpdate {
+            self.locationUpdateWaiter.wait(for: Constant.kLocationUpdate) { [weak self] result in
+                guard case .success = result else {
+                    return
+                }
+                self?.showCurrentUserLocation(waitForLocationUpdate: false)
+            }
+        } else {
+            let location = self.mapView.userLocation
+            let region = MKCoordinateRegion(center: location.coordinate, span: Constant.userLocationZoom)
+            self.mapView.setRegion(region, animated: true)
+        }
     }
 
     func selectPolygon(id: String, hasParent: Bool) {
@@ -392,6 +399,10 @@ extension MapViewController: MapViewInput {
             locationZoom: Constant.userLocationZoom,
             animated: animated
         )
+    }
+
+    func hideLocationButton() {
+        self.locationButton.isHidden = true
     }
 }
 

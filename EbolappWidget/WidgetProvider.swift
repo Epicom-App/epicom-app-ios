@@ -47,17 +47,8 @@ struct WidgetProvider: TimelineProvider {
 
     private func handleUserLocation(onAvailable: @escaping () -> Void, onDenied: @escaping () -> Void) {
         switch self.locationManager.authorizationStatus {
-        case .denied, .restricted:
+        case .denied, .restricted, .notDetermined:
             onDenied()
-        case .notDetermined:
-            self.locationManager.requestAuthorization { result in
-                switch result {
-                case .success:
-                    onAvailable()
-                case .failure:
-                    onDenied()
-                }
-            }
         default:
             onAvailable()
         }

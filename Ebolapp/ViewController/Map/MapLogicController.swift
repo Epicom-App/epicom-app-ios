@@ -16,6 +16,7 @@ protocol MapLogicControllerInput: class {
     func willChangeMapRegion()
     func didChangeMapPosition(box: MapRegionBoxModel)
     func didTapOnRegion(regionId: String)
+    func didTapLocationButton()
 }
 
 protocol MapLogicControllerOutput: class {
@@ -25,6 +26,8 @@ protocol MapLogicControllerOutput: class {
     func updateRiskDates(dates: [Date])
     func setupLoading(isLoading: Bool)
     func updateRegionInfo(info: MapRegionInfoModel?)
+    func showUserLocation(waitForLocationUpdate: Bool)
+    func hideLocationButton()
 }
 
 typealias MapServiceInput =
@@ -53,7 +56,7 @@ class MapLogicController {
     
     // Dependencies
     private let mapper: RiskAreaPolygonMapperProtocol = RiskAreaPolygonMapper()
-    private let locationsManager: UserLocationManagerInterface = UserLocationManager.shared
+    private let locationAuthManager = LocationAuthManager()
     private let alertsHelper = AlertsHelperFactory.createMapAlertsHelper()
     
     // Properties
@@ -91,17 +94,38 @@ class MapLogicController {
         }
     }
 
-    private func checkLocationPermissions() {
-        guard ![.notDetermined, .authorizedAlways].contains(self.locationsManager.authorisationStatus) else {
+    private func checkLocationAvailable() {
+        guard self.locationAuthManager.authorizationStatus == .restricted else {
             return
         }
-        self.alertsHelper.showLocationDeniedAlert()
+        self.output?.hideLocationButton()
     }
 }
 
 // MARK: MapLogicControllerInput
 
 extension MapLogicController: MapLogicControllerInput {
+
+    func didTapLocationButton() {
+        switch self.locationAuthManager.authorizationStatus {
+        case .authorizedAlways, .authorizedWhenInUse:
+            self.output?.showUserLocation(waitForLocationUpdate: false)
+        case .denied:
+            self.alertsHelper.showLocationDeniedAlert()
+        case .restricted:
+            self.output?.hideLocationButton()
+        case .notDetermined:
+            self.locationAuthManager.requestAuthorization(type: .always, continuous: false) { [weak self] result in
+                if [.authorizedAlways, .authorizedWhenInUse].contains(result.result) {
+                    self?.output?.showUserLocation(waitForLocationUpdate: true)
+                } else {
+                    self?.didTapLocationButton()
+                }
+            }
+        default:
+            break
+        }
+    }
 
     func willChangeMapRegion() {
         self.service.cancelCurrentMapRegionsRequest()
@@ -115,7 +139,7 @@ extension MapLogicController: MapLogicControllerInput {
     func startUpdates() {
         self.riskDatesOffsets = []
         self.loadData()
-        self.checkLocationPermissions()
+        self.checkLocationAvailable()
         self.service.observeRiskMatchesForPeriod(days: Constants.daysBeforeToday)
     }
     
