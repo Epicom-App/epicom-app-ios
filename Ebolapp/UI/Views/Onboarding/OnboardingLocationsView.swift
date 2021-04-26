@@ -44,7 +44,7 @@ final class OnboardingLocationsView: OnboardingActionView, TitleProviderProtocol
                     buttonText: L10n.Localizable.onboardingAllowLocationBtn,
                     action: { [weak self, weak presenter] in
                         self?.update(state: .loading)
-                        self?.locationAuthManager.requestAuthorization(type: .always) { result in
+                        self?.locationAuthManager.requestAuthorization(type: .always) { _ in
                             presenter.map { self?.configureActions(presenter: $0) }
                         }
                     }))
