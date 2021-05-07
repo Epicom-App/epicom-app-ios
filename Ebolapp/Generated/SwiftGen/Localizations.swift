@@ -11,6 +11,8 @@ import Foundation
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
   internal enum Localizable {
+    /// Akzeptieren
+    internal static let acceptButton = L10n.tr("Localizable", "accept_button")
     /// Schließen
     internal static let closeButton = L10n.tr("Localizable", "close_button")
     /// Link zu einer Website des Landkreises mit weiterführenden Informationen zum Coronavirus
@@ -23,6 +25,8 @@ internal enum L10n {
     internal static let contentDescriptionRiskMatch = L10n.tr("Localizable", "content_description_risk_match")
     /// Einstellungen
     internal static let contentDescriptionSettingsButton = L10n.tr("Localizable", "content_description_settings_button")
+    /// Ablehnen
+    internal static let declineButton = L10n.tr("Localizable", "decline_button")
     /// Etwas ist schief gelaufen.\nBitte versuche es erneut.
     internal static let errorDefaultMessage = L10n.tr("Localizable", "error_default_message")
     /// Fehler
@@ -45,7 +49,7 @@ internal enum L10n {
     internal static let mapRegionDangerLevel = L10n.tr("Localizable", "map_region_danger_level")
     /// Covid-19
     internal static let mapRegionInfoCovid = L10n.tr("Localizable", "map_region_info_covid")
-    /// Landkreis
+    /// Infos
     internal static let mapRegionInfoLinkName = L10n.tr("Localizable", "map_region_info_link_name")
     /// Vor %1$i Tagen
     internal static func mapSliderDaysAgo(_ p1: Int) -> String {
@@ -145,6 +149,10 @@ internal enum L10n {
     internal static let onboardingTitleNotifications = L10n.tr("Localizable", "onboarding_title_notifications")
     /// Einstellungen
     internal static let openSettingsButton = L10n.tr("Localizable", "open_settings_button")
+    /// Ich erkläre hiermit meine ausdrückliche Einwilligung in die Erhebung und Verarbeitung meiner Standortdaten durch EPICOM für Zwecke des Abgleichs mit als riskant bewerteten Standorten. Die in der Datenschutzerklärung enthaltenen Informationen zur Verarbeitung meiner Standortdaten habe ich zur Kenntnis genommen.\n\nIn kann meine Einwilligung jederzeit mit Wirkung für die Zukunft widerrufen. Die Rechtmäßigkeit der bis zum Widerruf erfolgte Verarbeitung meiner Standortdaten bleibt unberührt.
+    internal static let permissionsLocationLegalInfoInfo = L10n.tr("Localizable", "permissions_location_legal_info_info")
+    /// Einwilligung in die Verarbeitung von Standortdaten
+    internal static let permissionsLocationLegalInfoTitle = L10n.tr("Localizable", "permissions_location_legal_info_title")
     /// Bitte warten.\nDer Ladevorgang kann einige Minuten dauern...
     internal static let pleaseWaitInfo = L10n.tr("Localizable", "please_wait_info")
     /// Aktualisieren
